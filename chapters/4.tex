@@ -1,0 +1,500 @@
+\section{Computational Implementation}
+
+\begin{frame}
+  \centering
+  \vfill
+  \begin{beamercolorbox}[sep=14pt,center,rounded=true,shadow=true,wd=\textwidth]{frametitle}
+    \usebeamerfont{frametitle}\LARGE Computational Implementation
+  \end{beamercolorbox}
+  \vfill
+\end{frame}
+
+
+\subsection{High-Performance Computing Tools}
+
+\begin{frame}{}
+    \frametitle{High-Performance Computing Tools}
+    The following high-performance computing tools are utilized in the implementation:
+    \begin{itemize}[label=\textbullet]
+        \item \textbf{PETSc}: A suite of data structures and routines for the scalable (parallel) solution of scientific applications modeled by partial differential equations.
+        \item \textbf{METIS}: A software package for partitioning unstructured graphs and computing fill-reducing orderings of sparse matrices.
+        \item \textbf{GMSH}: A 3D finite element mesh generator with built-in pre- and post-processing facilities.
+        \item \textbf{Python}: A programming language used for scripting and automation of the workflow.
+        \item \textbf{Paraview}: An open-source, multi-platform data analysis and visualization application.
+    \end{itemize}
+\end{frame}
+
+
+% \subsection{PETSc}
+\begin{frame}{}
+    \frametitle{PETSc}
+    \begin{figure}[H]
+      \centering
+        \includegraphics[width=.5\textwidth]{figs/4/petsc.png}
+    \end{figure}
+    PETSc (Portable, Extensible Toolkit for Scientific Computation) is designed for the \textbf{scalable} solution of scientific applications modeled by partial differential equations (\textbf{PDEs}). 
+    It is a powerful and convenient interface for:
+    \begin{itemize}[label=\textbullet]
+        \item Management of \textbf{parallelism and communication}.
+        \item \textbf{Algebraic operations} on distributed vectors (\texttt{Vec}) and matrices(\texttt{Mat}).
+        \item Linear (\texttt{KSP}) and nonlinear (\texttt{SNES}) \textbf{solvers} (algorithms (NR, LS, TR, etc) based on \texttt{KSP} objects).
+    \end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{}
+    \frametitle{METIS}
+    METIS is a library for partitioning and producing fill reducing orderings for finite element meshes.
+    \begin{columns}[t]
+      \begin{column}{0.45\textwidth}
+        \begin{itemize}[label=\textbullet]
+          \item \textbf{Fill-reducing}: \texttt{METIS\_NodeND}.
+        \end{itemize}
+        \begin{figure}[H]
+        \centering
+        \caption{Sparse matrix representation.}
+            \includegraphics[width=1.1\textwidth]{figs/4/sen2_matrix_REFxRCMxMETIS.png}
+        \\\caption*{Authors.}
+        \label{fig:matrix-sen2}
+        \end{figure}
+    \end{column}
+    % \hspace{2em}
+    \begin{column}{0.55\textwidth}
+        \begin{itemize}[label=\textbullet]
+          \item \textbf{Mesh Partitioning}: \texttt{METIS\_PartMeshDual}.
+        \end{itemize}
+        \begin{figure}[H]
+        \centering
+        \caption{Mesh partitioning.}
+          \begin{subfigure}[b]{0.4\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/4/processScale.png}
+        \end{subfigure}
+        \\
+          \begin{subfigure}[b]{0.15\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/4/sen1_mesh.png}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.15\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/4/sen2_mesh.png}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.15\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/4/Lshaped_mesh.png}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.15\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/4/holed_mesh.png}
+        \end{subfigure}
+        \\
+        \begin{subfigure}[b]{0.19\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/4/sen1_MetisDualGraph.png}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.19\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/4/sen2_MetisDualGraph.png}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.15\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/4/Lshaped_MetisDualGraph.png}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.15\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/4/holed_MetisDualGraph.png}
+        \end{subfigure}
+        \\\caption*{Authors.}
+        \label{fig:process-partitioning}
+      \end{figure}
+
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% \subsection{Additional Tools}
+\begin{frame}{}
+    \frametitle{GMSH,HDF5, Python, Paraview}
+
+    \begin{itemize}[label=\textbullet]
+        \item \textbf{GMSH}: A 3D finite element mesh generator with built-in pre- and post-processing facilities.
+        \item \textbf{HDF5}: Built for fast I/O processing and storage.
+        \item \textbf{Python}: A programming language used for scripting and automation of the workflow.
+        \item \textbf{Paraview}: Open-source multiple-platform application for interactive, scientific visualization.
+    \end{itemize}
+
+    \begin{figure}[H]
+      \centering
+      \caption{Mesh partitioning.}
+      \begin{subfigure}[b]{0.1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/4/hdf5.png}
+      \end{subfigure}
+      \hspace{1em}
+      \begin{subfigure}[b]{0.35\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/4/paraview.png}
+      \end{subfigure}
+      \hspace{1em}
+      \begin{subfigure}[b]{0.1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/4/gmsh_title.png}
+      \end{subfigure}
+      \\\caption*{Authors.}
+      \label{fig:process-partitioning}
+  \end{figure}
+
+\end{frame}
+
+
+
+
+\subsection{Global Minimization}
+\begin{frame}{}
+    \frametitle{Solution of the coupled problem}
+  \begin{itemize}[label=\textbullet]
+    \item \textbf{Monolithic approach} \cite{bharali2022}
+  \end{itemize}
+  \begin{equation}
+      \begin{bmatrix}
+      \bm{K}^{uu} & \bm{K}^{ud} \\
+      \bm{K}^{du} & \bm{K}^{dd}
+      \end{bmatrix}
+      \begin{bmatrix}
+      \bm{\Delta u} \\
+      \Delta d
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+      \bm{r^u} \\
+      \bm{r^d}
+      \end{bmatrix}
+  \end{equation}
+  \begin{itemize}[label=\textbullet]
+    \item \textbf{Staggered approach}
+  \end{itemize}
+  \begin{equation}
+      \begin{bmatrix}
+      \bm{K}^{uu} & 0 \\
+      0 & \bm{K}^{dd}
+      \end{bmatrix}
+      \begin{bmatrix}
+      \bm{\Delta u} \\
+      \Delta d
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+      \bm{r^u} \\
+      \bm{r^d}
+      \end{bmatrix}
+  \end{equation}
+  or, in more detail,
+  \begin{equation}
+    \begin{cases}
+    \partial_u \varPi_{n+1}(\bm{u}^{i+1}_{n+1},d^{i}_{n+1}) = 0 \\
+    \partial_d \varPi_{n+1}(\bm{u}^{i+1}_{n+1},d^{i+1}_{n+1}) \left[\Delta d^{i+1}_{n+1}\right] = 0
+    , \quad
+    \partial_d \varPi_{n+1}(\bm{u}^{i+1}_{n+1},d^{i+1}_{n+1}) \geq 0
+    , \quad
+    \Delta d^{i+1}_{n+1} \geq 0
+    \end{cases}
+    .
+    \label{eq:alternated_minimization}
+\end{equation} 
+
+
+\end{frame}
+
+
+
+\begin{frame}{}
+    \frametitle{Staggered approach} 
+\begin{algorithmic}  [1] %adds line numbers
+\Require Load solution $(\mathbf{u}_n, d_n)$ from step $n$ and boundary conditions $g_{n+1}, t_{n}$ at current step $n$
+\State initialize $i \gets 0$
+\State set $(\mathbf{u}^{0}, d^{0}) \gets (\mathbf{u}_{n}, d_{n})$
+\While{$Re_{\text{stag}} \geq TOL_{\text{stag}}$}
+  \State $i \gets i + 1$
+  \State given $\,d^{\,i-1} = d_{n} + \Delta d^{\,i-1}\,$, find \,\(\mathbf{u}^{\,i}\) solving \,
+  \(
+    \partial_{\mathbf{u}}\varPi_{\,n+1}(\mathbf{u}^{\,i}, d^{\,i-1}) = 0
+  \)
+  \State given \,\(\mathbf{u}^{\,i}\), find \,\(\Delta d^{\,i}\) solving \,
+  \(\partial_{d}\varPi_{\,n+1}(u^{\,i}, d_{\,n})[\Delta d^{\,i}]=0\)
+  with
+  \(\qquad \qquad \partial_{d}\varPi_{\,n+1}(\mathbf{u}^{\,i}, d_{\,n}) \ge 0, \quad \Delta d^{\,i} \ge 0\)
+  \State compute \(\left|Re_{\text{stag}} = \partial_{\mathbf{u}}\varPi_{\,n+1}(\mathbf{u}^{\,i}, d^{\,i})[\Delta \mathbf{u}^{\,i}]\right|\)
+\EndWhile
+\State $(\mathbf{u}_{n+1}, d_{n+1}) \gets (\,\mathbf{u}^{\,i}, d^{\,i}\,)$
+\end{algorithmic}
+
+\end{frame}
+
+\subsection{Linear Momentum Solution}
+
+\begin{frame}
+\frametitle{Linear Momentum Solution}
+% \vspace{-2em}
+From Principle of Virtual Work, the weak form is given as:
+  \begin{equation}
+      \int_{\Omega} \left[\bm{\nabla^s w}:\mathbb{D} \bm{\nabla^s u}\right]dV 
+      = \int_{\Gamma_t} \bm{t}\cdot\bm{w}dS 
+      + \int_{\mathcal{B}} \bm{b}\cdot\bm{w}dV
+      \qquad \forall \text{ \(\bm{w} = 0\) on \(\Gamma_u\)}
+  \end{equation}
+  \vspace{-3em}
+   \begin{columns}[t]
+      \begin{column}{0.55\textwidth}
+        \begin{equation}
+          \begin{cases}
+            \bm{u}(x,y) = \bm{N^e}(x,y)\bm{u}^e \\
+            \bm{w}(x,y) = \bm{N^e}(x,y)\bm{w}^e 
+          \end{cases}
+            \forall (x,y) \in \Omega_e
+        \end{equation}
+        \begin{equation}
+          \bm{\varepsilon} = \bm{\nabla^s u} 
+          = \bm{B^e}\bm{u^e}
+        \end{equation}
+        and the system of equations can be written as
+        \begin{equation}
+            \bm{K}\bm{u} = \bm{F}
+        \end{equation}
+    \end{column}
+    % \hspace{2em}
+    \begin{column}{0.46\textwidth}
+      \begin{figure}[H]
+        \centering
+        \caption{Discrete domain.}
+        \includegraphics[width=0.4\textwidth]{figs/4/finite_body.png}
+        \\\caption*{\citeonline{anand_continuum_2020}.}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \vspace{-1em}
+  where
+  \vspace{-1em}
+  \begin{equation}
+    \bm{K} = \sum_{e=1}^n  \left[\int_{\Omega_e} \bm{B}^T_e\mathbb{C}\bm{B}_e d\Omega\right] \bm{u}^e
+    \quad \text{and} \quad
+    \bm{F} = \sum_{e=1}^n \int_{\varGamma_e} \bm{N}^T_e\bm{t}d\varGamma
+            + \sum_{e=1}^n \int_{\Omega_e} \bm{N}^T_e\bm{b}d\Omega
+  \end{equation}
+
+\end{frame}
+
+\begin{frame}{}
+    \frametitle{Newton Raphson}
+    Taylor expansion gives
+\begin{equation}
+    \bm{R}(\bm{u}^{k+1}) 
+    = \bm{R}(\bm{u}^k) 
+    + \left[\frac{\partial \bm{R}}{\partial \bm{u}}\right]_{\bm{u}^k}\left(\bm{u}^{k+1} - \bm{u}^k\right)
+    + \mathcal{O}\left(\left(\bm{u}^{k+1} - \bm{u}^k\right)^2\right)
+\end{equation}
+that, after linearization and assuming that \(\bm{R}(\bm{u}^{k+1}) = 0\)
+\begin{equation}
+    \bm{R}(\bm{u}^k) 
+    + \left[\frac{\partial \bm{R}}{\partial \bm{u}}\right]_{\bm{u}^k}\left(\bm{u}^{k+1} - \bm{u}^k\right)
+    = 0
+    \quad ,
+\end{equation}
+Rearranging the equation, we can write
+\begin{equation}
+    \left[\frac{\partial^2 \varPi}{\partial \bm{u}^2}\right]_{\bm{u}^k}\bm{\Delta u}^{k+1} 
+    = -\bm{R}(\bm{u}^k)
+    \quad \Rightarrow \quad
+        \bm{K(\bm{u}^k)}\bm{\Delta u}^{k+1} = -\bm{R}(\bm{u}^k)
+\end{equation}
+\texttt{PCFactorSetReuseOrdering(PETSC\_TRUE)} and \texttt{KSPSetReusePreconditioner(PETSC\_FALSE)}
+
+\end{frame}
+
+\begin{frame}{}
+    \frametitle{Line Search}
+    Optimal step size
+\begin{equation}
+    \bm{u}^{k+1}_{n} = \bm{u}^k + \eta_{n} \bm{\Delta u}^{k+1} \quad .
+    \label{eq:line_search}
+\end{equation}
+assuming that \(\bm{R}(\eta_{n}) \perp \bm{\Delta u}\)
+\begin{equation}
+    R(\eta_{n}) = \bm{R}(\eta_{n})\cdot\bm{\Delta u} = \bm{R}(\bm{u}^k + \eta_{n}\bm{\Delta u})\cdot\bm{\Delta u}
+\end{equation}
+that, after some algebra, leads to the following iterative formula for \(\eta\):
+\begin{equation}
+    \eta_{n+1} = 
+    \begin{cases}
+        \dfrac{\alpha_{n}}{2} + \sqrt{\left(\dfrac{\alpha_{n}}{2}\right)^2 - \alpha_n } & \text{if } \alpha_n < 0 \\[0.5ex]
+        \dfrac{\alpha_{n}}{2} & \text{if } \alpha_n > 0
+    \end{cases}
+    \quad \rightarrow \quad \text{where} \quad
+        \alpha_n = \dfrac{R(\bm{u}^k)}{ R(\eta_n) } = \dfrac{R_0}{R(\eta_n)}
+\end{equation}
+with a stopping criterion defined by \citeonline{bonet_nonlinear_2016} as 
+\begin{equation}
+    \left|R(\eta_{n})\right| < \rho \left| R(0)\right| \quad ,
+    \qquad \text{which} \quad
+    \rho = 0.5
+\end{equation}
+
+\end{frame}
+
+
+\begin{frame}{}
+    % \frametitle{System of equations}
+
+      \centering
+  \begin{adjustbox}{max width=\textwidth, max totalheight=\textheight, keepaspectratio}
+    \begin{minipage}{\textwidth}
+      \scriptsize
+  \begin{algorithmic}[1]
+    \Ensure Newton-raphson solution $\Delta\bm{u}^{k+1}$
+      \State Compute $R_0 = \bm{R}(\bm{u}^k)\cdot\Delta\bm{u}^{k+1}$
+      \State $\eta_0 \gets 1,\ \rho \gets 0.5$
+      \For{$n = 0$ {\bfseries to} $N_{\max}^{LS}$}
+        \State $\bm{u}_{\text{n}} \gets \bm{u}^k + \eta_n\,\Delta\bm{u}^{k+1}$
+        \State Assemble residual $\bm{R}(\eta_n) = \bm{F}(\eta_n)_{int} - \bm{F}_{ext}$  
+        \State Compute $R(\eta_n) = \bm{R}(\eta_n)\cdot\Delta\bm{u}^{k+1}$
+        \If{$|R(\eta_n)| \le \rho\,|R_0|$}
+          \State \textbf{break}
+        \Else
+          \State $\alpha \gets R_0 / R(\eta_n)$
+          \If{$\alpha < 0$}
+            \State $\eta_n \gets \alpha/2 + \sqrt{(\alpha/2)^2 - \alpha}$
+          \Else
+            \State $\eta_n \gets \alpha/2$
+          \EndIf
+        \EndIf
+        \State $n \gets n + 1$
+      \EndFor
+      \State $\bm{u}^{\,k+1} \gets \bm{u}^k + \eta_n\,\Delta\bm{u}^{k+1}$
+  \end{algorithmic}
+    \end{minipage}
+  \end{adjustbox}
+
+    
+\end{frame}
+
+
+
+\subsection{Damage Solution}
+\begin{frame}{}
+    \frametitle{Symmetric Linear Complementarity Problem (SLCP)}
+    Taylor expansion around \(\hat{\bm{d}}_n\)
+    \begin{equation}
+    \varPi_{n+1}(\hat{\bm{u}}^i,\hat{\bm{d}})
+    = \frac12\,\Delta\hat{\bm{d}}^{\mathsf T}\,Q^i\,\Delta\hat{\bm{d}}
+    + \Delta\hat{\bm{d}}^{\mathsf T}\,q^i
+    + \varPi_{n+1}(\hat{\bm{u}}^i,\hat{\bm{d}}_n),
+\end{equation}
+where
+\begin{equation}
+    \Delta\hat{\bm{d}} = \hat{\bm{d}} - \hat{\bm{d}}_n
+    \, ,\quad
+    Q^i = \nabla^2_{\hat{\bm{d}}\hat{\bm{d}}} \varPi_{n+1}(\hat{\bm{u}}^i,\hat{\bm{d}}_n)
+    \, ,\quad
+    q^i = \nabla_{\hat{\bm{d}}}\,\varPi_{n+1}(\hat{\bm{u}}^i,\hat{\bm{d}}_n)\,.
+    \label{eq:Qq}
+\end{equation}
+and finally, the Jacobian (Hessian) \(Q^i\) and Gradient(Residue) \(q^i\) are given by
+\begin{equation}
+  Q^i := \Psi_e(\hat{\bm{u}}^i) \;+\; G_c\,\Phi_e,
+  \qquad
+  q^i := Q^i\,\hat{\bm{d}}_n \;-\; \psi_e(\hat{\bm{u}}^i).
+\end{equation}
+
+
+\end{frame}
+
+
+\begin{frame}{}
+    \frametitle{Symmetric Linear Complementarity Problem (SLCP)}
+
+    the constant element dissipation matrix \(\Phi_e\) is given by
+\begin{equation}
+  \Phi_e := 
+  \begin{cases}
+    \displaystyle\int_{\Omega_e}
+    \left(\frac{3l_0}{8}\,B_{d,e}^{\mathsf T}B_{d,e}\right)
+    \,\mathrm{d}\Omega_e & \text{if AT1} \\[2ex]
+    \displaystyle\int_{\Omega_e}
+    \left(l_0^{-1}\,N_{d,e}^{\mathsf T}N_{d,e}
+            + l_0\,B_{d,e}^{\mathsf T}B_{d,e}\right)
+    \,\mathrm{d}\Omega_e & \text{if AT2}
+  \end{cases}
+\end{equation}
+and the element free energy matrix \(\Psi_e\) and vector \(\psi_e\) are given by
+\begin{equation}
+\Psi_e(\hat{\bm{u}}^i_e)
+    := \int_{\Omega_e}
+    2\,\psi_0^+\bigl(\hat{\bm{u}}^i_e\bigr)\,
+    N_{d,e}^{\mathsf T}N_{d,e}
+    \,\mathrm d\Omega_e
+\end{equation}
+
+\begin{equation}
+\psi_e(\hat{\bm{u}}^i_e)
+    := 
+    \begin{cases}
+        \displaystyle \int_{\Omega_e}
+        \left[2\,\psi_0^+\bigl(\hat{\bm{u}}^i_e\bigr) - \dfrac{3l_0}{8}\right]\,
+        N_{d,e}^{\mathsf T}
+        \,\mathrm d\Omega_e. & \text{if AT1} \\[2ex]
+        \displaystyle \int_{\Omega_e}
+        2\,\psi_0^+\bigl(\hat{\bm{u}}^i_e\bigr)\,
+        N_{d,e}^{\mathsf T}
+        \,\mathrm d\Omega_e. & \text{if AT2}
+    \end{cases}
+\end{equation}
+
+
+\end{frame}
+
+\begin{frame}{}
+    \frametitle{Projected Successive Over-Relaxation (PSOR)}
+The SLCP is gives rise to the following conditions:
+    \begin{equation}
+    \partial_d \varPi_{n+1}(\bm{u}_{n+1},d_{n+1}) \left[\Delta d_{n+1}\right]
+    , \quad
+    \partial_d \varPi_{n+1}(\bm{u}_{n+1},d_{n+1}) \geq 0
+    , \quad
+    \Delta d_{n+1} \geq 0
+    \end{equation}
+
+    \begin{equation}
+    x^{k+1} = \left(\mathbf{L} + \mathbf{D}\right)^{-1}\left(b - \mathbf{U}x^k\right)
+\end{equation}
+which, after some algebra, \citeonline{Marengo2021} shows that can be written as
+\begin{equation}
+    \Delta d^{k}_{r} =
+    \left\langle \Delta d^{k-1}_{r} - D^{-1}_{rr}\left[Q_{rc}\Delta d^{k-1}_{c}
+    + L_{rc}\left(\Delta d^{k}_{c} - \Delta d^{k-1}_{c}\right)\right] \right\rangle_+
+\end{equation}
+where
+\begin{columns}
+  \begin{column}{0.4\textwidth}
+    \begin{equation}
+      \begin{cases}
+        L_{rc} := Q_{r>c} \\[2ex]
+        D_{rr} := Q_{r=r}
+      \end{cases}
+    \end{equation}
+  \end{column}
+  \begin{column}{0.4\textwidth}
+    \begin{equation}
+        \langle x \rangle_+ := 
+      \begin{cases}
+        x & \text{if } x \geq 0 \\[2ex]
+        0 & \text{if } x < 0
+      \end{cases}
+    \end{equation}
+  \end{column}
+\end{columns} 
+
+
+
+\end{frame}
+
+

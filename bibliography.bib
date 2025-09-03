@@ -1,0 +1,1581 @@
+
+@article{Ferreira2024,
+  author =        {Ferreira, A R and Marengo, A and Perego, U},
+  journal =       {(under revision)},
+  title =         {A Phase-Field Gradient-Based Energy Split for
+                   Modeling of Brittle Fracture under Cyclic Loading},
+  year =          {2024},
+  abstract =      {Despite the attention devoted to phase-field modeling
+                   of brittle fracture in the last 20 years, there are
+                   still some open issues. Among these, the search for a
+                   physically reasonable and computationally feasible
+                   criterion to split the energy density into parcels
+                   that may or may not contribute to crack propagation
+                   has been the subject of many recent studies. Within
+                   this context, we propose an energy split -- or energy
+                   decomposition -- with the aim of representing as
+                   accurately as possible the mechanical behavior of a
+                   crack under cyclic loading. To this purpose, two key
+                   assumptions are made. The first one is the
+                   interpretation of the gradient damage direction as
+                   being equivalent to the normal-to-crack direction, as
+                   already known by the literature. The second
+                   assumption is to consider the sign of the projection
+                   of the strain tensor on the normal-to-crack
+                   directions at a point as an indicator of whether this
+                   point should behave as an open or as a closed crack.
+                   We associate the latter case to both (a) a complete
+                   recovery of elastic energy density and (b) a zero
+                   driving force at such point. The first case is
+                   treated classically as a damageable material point at
+                   which the crack is free to propagate. Four examples
+                   are presented in order to assess the suitability of
+                   the present model by using both AT1 and AT2
+                   regularization models. Results show the desired
+                   effect of limiting crack propagation to tension as
+                   well as of recovering its intact stiffness upon load
+                   reversal, even when the two most known energy splits
+                   fail to. Finally, the simplicity and effectiveness of
+                   our approach may pave the way to more sophisticated
+                   idealizations and to complex large-scale
+                   applications.},
+  timestamp =     {2024-07-18T14:02:50Z},
+}
+
+@article{Marengo2021,
+	title = {A rigorous and efficient explicit algorithm for irreversibility enforcement in phase-field finite element modeling of brittle crack propagation},
+	issn = {00457825},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0045782521004680},
+	abstract = {In the present work, a computationally efficient and explicit algorithm for the rigorous enforcement of the irreversibility constraint in the phase-field modeling of brittle fracture is presented. The proposed approach is staggered and relies on the alternate minimization of the total energy functional. The phase-field evolution turns out to be governed by a complementarity boundary-value problem, where the complementarity stems from the irreversibility, while the boundary-value problem is originated by the presence of the gradient term in the phase-field functional. Several different techniques have been proposed in the literature to account for damage irreversibility in a computationally effective way. Following a similar approach proposed in the past for a gradient-plasticity problem, a particularly simple and effective solution strategy based on the Projected Successive Over-Relaxation (PSOR) method for constrained optimization, where an iterative explicit scheme is used for the solution of symmetric linear complementarity problems, is presented. Even though the proposed method is restricted to linear complementarity problems, it can be applied to the numerical simulation of a wide range of problems discussed in the literature. The performance of the suggested solution algorithm on a number of test cases is compared with that of a recently proposed penalty approach for the approximated enforcement of irreversibility.},
+	language = {en},
+	urldate = {2024-10-02},
+	journal = {Computer Methods in Applied Mechanics and Engineering},
+	author = {Marengo, Alessandro and Patton, Alessia and Negri, Matteo and Perego, Umberto and Reali, Alessandro},
+	month = dec,
+	year = {2021},
+	pages = {114137},
+}
+
+
+@article{babuska_gfem_1997,
+	title = {{THE} {PARTITION} {OF} {UNITY} {METHOD}},
+	volume = {40},
+	copyright = {http://doi.wiley.com/10.1002/tdm\_license\_1.1},
+	issn = {0029-5981, 1097-0207},
+	url = {https://onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-0207(19970228)40:4<727::AID-NME86>3.0.CO;2-N},
+	doi = {10.1002/(SICI)1097-0207(19970228)40:4<727::AID-NME86>3.0.CO;2-N},
+	abstract = {A new ﬁnite element method is presented that features the ability to include in the ﬁnite element space knowledge about the partial diﬀerential equation being solved. This new method can therefore be more eﬃcient than the usual ﬁnite element methods. An additional feature of the partition-of-unity method is that ﬁnite element spaces of any desired regularity can be constructed very easily. This paper includes a convergence proof of this method and illustrates its eﬃciency by an application to the Helmholtz equation for high wave numbers. The basic estimates for a posteriori error estimation for this new method are also proved.},
+	language = {en},
+	number = {4},
+	urldate = {2025-08-12},
+	journal = {International Journal for Numerical Methods in Engineering},
+	author = {Babuška, I. and Melenk, J. M.},
+	month = feb,
+	year = {1997},
+	pages = {727--758},
+	file = {PDF:/home/diego/Zotero/storage/QYVC24TF/Babuška and Melenk - 1997 - THE PARTITION OF UNITY METHOD.pdf:application/pdf},
+}
+
+
+@article{hydraulic_pf,
+	title = {A review on phase-field modeling of hydraulic fracturing},
+	volume = {253},
+	issn = {00137944},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0013794421003143},
+	doi = {10.1016/j.engfracmech.2021.107881},
+	abstract = {Motivated by the successful implementation of the phase-field method (PFM) to simulate complicated fracture patterns at moderate computational costs in solid materials, many research groups have started since 2012 applying the PFM to model hydraulic fracturing, especially that occurs in porous geomaterials. These research works have contributed to the development of the PFM from different perspectives, especially in connection with the mathematical formulations of the hydro-mechanical processes and the numerical algorithms to solve the emerging coupled problems. In this regard, the underlying paper aims to review the significant scientific works that utilized the PFM to model fracturing caused mainly by fluid injection in a certain porous domain and, less common, by fluid extraction (e.g., drying) from a certain porous domain. This includes reviewing different approaches for deriving the phase-field evolution formulation (e.g. Ginzburg–Landau approach, thermodynamically consistent approaches, and microforce-based approach) and reviewing several formulations for the stiffness degradation function and that of the crack driving force. Besides, the paper will go through several methods to estimate the crack aperture width, in addition to reviewing different numerical approaches and implementations. The paper will be concluded by presenting a number of open topics and challenges to be addressed in future works.},
+	language = {en},
+	urldate = {2025-08-12},
+	journal = {Engineering Fracture Mechanics},
+	author = {Heider, Yousef},
+	month = aug,
+	year = {2021},
+	pages = {107881},
+	file = {PDF:/home/diego/Zotero/storage/GUBLA797/Heider - 2021 - A review on phase-field modeling of hydraulic fracturing.pdf:application/pdf},
+}
+
+@article{belytschko_xfem_1999,
+    title = {A finite element method for crack growth without remeshing},
+    volume = {46},
+    copyright = {http://doi.wiley.com/10.1002/tdm\_license\_1.1},
+    issn = {0029-5981, 1097-0207},
+    url = {https://onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-0207(19990910)46:1<131::AID-NME726>3.0.CO;2-J},
+    doi = {10.1002/(SICI)1097-0207(19990910)46:1<131::AID-NME726>3.0.CO;2-J},
+    abstract = {An improvement of a new technique for modelling cracks in the nite element framework is presented. A standard displacement-based approximation is enriched near a crack by incorporating both discontinuous elds and the near tip asymptotic elds through a partition of unity method. A methodology that constructs the enriched approximation from the interaction of the crack geometry with the mesh is developed. This technique allows the entire crack to be represented independently of the mesh, and so remeshing is not necessary to model crack growth. Numerical experiments are provided to demonstrate the utility and robustness of the proposed technique. Copyright ? 1999 John Wiley \& Sons, Ltd.},
+    language = {en},
+    number = {1},
+    urldate = {2025-08-12},
+    journal = {International Journal for Numerical Methods in Engineering},
+    author = {Mo\"{e}s, Nicolas and Dolbow, John and Belytschko, Ted},
+    month = sep,
+    year = {1999},
+    pages = {131--150},
+    file = {PDF:/home/diego/Zotero/storage/L93TRUQD/Mo�s et al. - 1999 - A finite element method for crack growth without remeshing.pdf:application/pdf},
+}
+
+
+
+
+@book{facchinei_finite-dimensional_2003,
+	address = {New York},
+	series = {Springer series in operations research},
+	title = {Finite-dimensional variational inequalities and complementarity problems},
+	isbn = {978-0-387-95580-3 978-0-387-95581-0},
+	language = {en},
+	publisher = {Springer},
+	author = {Facchinei, Francisco and Pang, Jong-Shi},
+	year = {2003},
+	keywords = {Linear complementarity problem, Variational inequalities (Mathematics)},
+	file = {PDF:/home/diego/Zotero/storage/DYFL4ISK/Facchinei and Pang - 2003 - Finite-dimensional variational inequalities and complementarity problems.pdf:application/pdf},
+}
+
+@book{Ashby2012,
+	address = {Oxford, United Kingdom},
+	edition = {Fifth edition},
+	title = {Engineering materials 1: an introduction to properties, applications and design},
+	isbn = {978-0-08-102051-7},
+	shorttitle = {Engineering materials 1},
+	abstract = {"Provides a broad introduction to the mechanical, environmental, and thermal properties of materials used in a wide range of engineering applications. The style is deliberately concise, with each chapter designed to cover the content of one lecture. As in previous editions, chapters are arranged in groups dealing with particular classes of properties, with each group covering property definitions, measurement, underlying principles, and materials design. Each group concludes with case studies that demonstrate practical engineering problems involving the properties covered. This fifth edition has expanded properties coverage, many new case studies and worked examples, and many more exercises-- including model solutions to more complex exercises, and outline solutions to many others." --From back cover},
+	language = {en},
+	publisher = {Butterworth-Heinemann},
+	author = {Jones, David R. H. and Ashby, M. F.},
+	year = {2019},
+	keywords = {Materials, Technology},
+	file = {PDF:/home/diego/Zotero/storage/PMTI9DKD/Jones and Ashby - 2019 - Engineering materials 1 an introduction to properties, applications and design.pdf:application/pdf},
+}
+
+
+@book{Anderson2017,
+  address =       {Boca Raton},
+  author =        {Anderson, T. L.},
+  edition =       {Fourth edition},
+  publisher =     {CRC Press/Taylor \& Francis},
+  title =         {Fracture Mechanics: Fundamentals and Applications},
+  year =          {2017},
+  isbn =          {978-1-4987-2813-3},
+  timestamp =     {2024-04-24T20:38:44Z},
+}
+
+@book{Lemaitre2005,
+  address =       {Berlin ; New York},
+  author =        {Lema{\^i}tre, J. and Desmorat, R.},
+  publisher =     {Springer},
+  title =         {Engineering Damage Mechanics: Ductile, Creep, Fatigue
+                   and Brittle Failures},
+  year =          {2005},
+  isbn =          {978-3-540-21503-5},
+  timestamp =     {2024-04-23T06:59:38Z},
+}
+@book{anand_continuum_2020,
+	edition = {1},
+	title = {Continuum {Mechanics} of {Solids}},
+	isbn = {978-0-19-886472-1 978-0-19-189676-7},
+	url = {https://academic.oup.com/book/43650},
+	abstract = {Abstract
+            Continuum mechanics of Solids presents a unified treatment of the major concepts in Solid Mechanics for beginning graduate students in the many branches of engineering. The fundamental topics of kinematics in finite and infinitesimal deformation, mechanical and thermodynamic balances plus entropy imbalance in the small strain setting are covered as they apply to all solids. The major material models of Elasticity, Viscoelasticity, and Plasticity are detailed and models for Fracture and Fatigue are discussed. In addition to these topics in Solid Mechanics, because of the growing need for engineering students to have a knowledge of the coupled multi-physics response of materials in modern technologies related to the environment and energy, the book also includes chapters on Thermoelasticity, Chemoelasticity, Poroelasticity, and Piezoelectricity. A preview to the theory of finite elasticity and elastomeric materials is also given. Throughout, example computations are presented to highlight how the developed theories may be applied.},
+	language = {en},
+	urldate = {2024-09-30},
+	publisher = {Oxford University PressOxford},
+	author = {Anand, Lallit and Govindjee, Sanjay},
+	month = jul,
+	year = {2020},
+	doi = {10.1093/oso/9780198864721.001.0001},
+	file = {PDF:C\:\\Users\\diegoveloso\\Zotero\\storage\\KDG6VN84\\Anand e Govindjee - 2020 - Continuum Mechanics of Solids.pdf:application/pdf},
+}
+
+@book{gordon_structures_1978,
+	address = {New York},
+	edition = {First Hachette books edition},
+	title = {Structures or {Why} things don't fall down},
+	isbn = {978-0-306-81283-5},
+	abstract = {For anyone who has ever wondered why suspension bridges don't collapse under eight lanes of traffic, how dams hold back--or give way under--thousands of gallons of water, or what principles guide the design of a skyscraper, a bias-cut dress, or a kangaroo, this book will ease your anxiety and answer your questions. Structures: Or Why Things Don't Fall Down is an informal explanation of the basic forces that hold together the ordinary and essential things of this world--from buildings and bodies to flying aircraft and eggshells. In a style that combines wit, a masterful command of his subject, and an encyclopedic range of reference, Gordon includes such chapters as "How to Design a Worm" and "The Advantage of Being a Beam," offering humorous insights in human and natural creation},
+	language = {en},
+	publisher = {Hachette Books},
+	author = {Gordon, J. E.},
+	year = {1978},
+	file = {PDF:/home/diego/Zotero/storage/SPIDLEMZ/Gordon - 1978 - Structures or Why things don't fall down.pdf:application/pdf},
+}
+
+
+@book{spencer_continuum_2004,
+	address = {Mineola, N.Y},
+	edition = {Dover ed},
+	title = {Continuum mechanics},
+	isbn = {978-0-486-43594-7},
+	language = {en},
+	publisher = {Dover Publ},
+	author = {Spencer, A. J. M. and Spencer, A. J. M.},
+	year = {2004},
+	file = {PDF:/home/diego/Zotero/storage/CQDEX7XH/Spencer and Spencer - 2004 - Continuum mechanics.pdf:application/pdf},
+}
+
+@book{jones_mechanics_1999,
+	address = {Boca Raton London New York},
+	edition = {Second edition},
+	title = {Mechanics of composite materials},
+	isbn = {1-56032-712-X},
+	language = {en},
+	publisher = {CRC Press, Taylor \& Francis Group},
+	author = {Jones, Robert Millard},
+	year = {1999},
+	file = {PDF:/home/diego/Zotero/storage/ZHMW5EFW/Jones - 1999 - Mechanics of composite materials.pdf:application/pdf},
+}
+
+
+@article{fish_first_nodate,
+	title = {A {First} {Course} in {Finite} {Elements}},
+	language = {en},
+	author = {Fish, Jacob},
+	file = {PDF:/home/diego/Zotero/storage/477KVQHA/Fish - A First Course in Finite Elements.pdf:application/pdf},
+}
+
+@book{wriggers_nonlinear_2008,
+	address = {Berlin, Heidelberg},
+	title = {Nonlinear {Finite} {Element} {Methods}},
+	isbn = {978-3-540-71000-4 978-3-540-71001-1},
+	abstract = {For engineers, finite element methods have become important tools for design and optimization, even for solving nonlinear technological problems. This book provides the knowledge needed for finite element analysis in solid mechanics},
+	language = {en},
+	publisher = {Springer Berlin / Heidelberg},
+	author = {Wriggers, Peter},
+	year = {2008},
+	file = {PDF:/home/diego/Zotero/storage/7WMREJ77/Wriggers - 2008 - Nonlinear Finite Element Methods.pdf:application/pdf},
+}
+
+@book{zienkiewicz_finite_2000,
+	address = {Oxford ; Boston},
+	edition = {5th ed},
+	title = {The finite element method},
+	isbn = {978-0-7506-5049-6 978-0-7506-5055-7 978-0-7506-5050-2},
+	language = {en},
+	publisher = {Butterworth-Heinemann},
+	author = {Zienkiewicz, O. C. and Taylor, Robert L.},
+	year = {2000},
+	keywords = {Continuum mechanics, Finite element method, Structural analysis (Engineering)},
+	file = {PDF:/home/diego/Zotero/storage/4RPXIATJ/Zienkiewicz and Taylor - 2000 - The finite element method.pdf:application/pdf},
+}
+
+@book{bonet_nonlinear_2016,
+	edition = {1},
+	title = {Nonlinear {Solid} {Mechanics} for {Finite} {Element} {Analysis}: {Statics}},
+	copyright = {https://www.cambridge.org/core/terms},
+	isbn = {978-1-107-11579-8 978-1-316-33614-4},
+	shorttitle = {Nonlinear {Solid} {Mechanics} for {Finite} {Element} {Analysis}},
+	url = {https://www.cambridge.org/core/product/identifier/9781316336144/type/book},
+	abstract = {Designing engineering components that make optimal use of materials requires consideration of the nonlinear static and dynamic characteristics associated with both manufacturing and working environments. The modeling of these characteristics can only be done through numerical formulation and simulation, which requires an understanding of both the theoretical background and associated computer solution techniques. By presenting both the nonlinear solid mechanics and the associated finite element techniques together, the authors provide, in the first of two books in this series, a complete, clear, and unified treatment of the static aspects of nonlinear solid mechanics. Alongside a range of worked examples and exercises are user instructions, program descriptions, and examples for the FLagSHyP MATLAB computer implementation, for which the source code is available online. While this book is designed to complement postgraduate courses, it is also relevant to those in industry requiring an appreciation of the way their computer simulation programs work.},
+	language = {en},
+	urldate = {2025-05-31},
+	publisher = {Cambridge University Press},
+	author = {Bonet, Javier and Gil, Antonio J. and Wood, Richard D.},
+	month = jun,
+	year = {2016},
+	doi = {10.1017/CBO9781316336144},
+	file = {PDF:/home/diego/Zotero/storage/RD6LZVRB/Bonet et al. - 2016 - Nonlinear Solid Mechanics for Finite Element Analysis Statics.pdf:application/pdf},
+}
+
+
+@article{Wu2017,
+  author =        {Wu, Jian-Ying},
+  journal =       {Journal of the Mechanics and Physics of Solids},
+  month =         jun,
+  pages =         {72--99},
+  title =         {A Unified Phase-Field Theory for the Mechanics of
+                   Damage and Quasi-Brittle Failure},
+  volume =        {103},
+  year =          {2017},
+  abstract =      {Being one of the most promising candidates for the
+                   modeling of localized failure in solids, so far the
+                   phase-field method has been applied only to brittle
+                   fracture with very few exceptions. In this work, a
+                   unified phase-field theory for the mechanics of
+                   damage and quasi-brittle failure is proposed within
+                   the framework of thermodynamics. Specifically, the
+                   crack phase-field and its gradient are introduced to
+                   regularize the sharp crack topology in a purely
+                   geometric context. The energy dissipation functional
+                   due to crack evolution and the stored energy
+                   functional of the bulk are characterized by a crack
+                   geometric function of polynomial type and an
+                   energetic degradation function of rational type,
+                   respectively. Standard arguments of thermodynamics
+                   then yield the macroscopic balance equation coupled
+                   with an extra evolution law of gradient type for the
+                   crack phase-field, governed by the aforesaid
+                   constitutive functions. The classical phase-field
+                   models for brittle fracture are recovered as
+                   particular examples. More importantly, the
+                   constitutive functions optimal for quasi-brittle
+                   failure are determined such that the proposed
+                   phase-field theory converges to a cohesive zone model
+                   for a vanishing length scale. Those general softening
+                   laws frequently adopted for quasi-brittle failure,
+                   e.g., linear, exponential, hyperbolic and Cornelissen
+                   et al. (1986) ones, etc., can be reproduced or fit
+                   with high precision. Except for the internal length
+                   scale, all the other model parameters can be
+                   determined from standard material properties (i.e.,
+                   Young's modulus, failure strength, fracture energy
+                   and the target softening law). Some representative
+                   numerical examples are presented for the validation.
+                   It is found that both the internal length scale and
+                   the mesh size have little influences on the overall
+                   global responses, so long as the former can be well
+                   resolved by sufficiently fine mesh. In particular,
+                   for the benchmark tests of concrete the numerical
+                   results of load versus displacement curve and crack
+                   paths both agree well with the experimental data,
+                   showing validity of the proposed phase-field theory
+                   for the modeling of damage and quasi-brittle failure
+                   in solids.},
+  url =           {doi:10.1016/j.jmps.2017.03.015},
+  issn =          {00225096},
+  timestamp =     {2024-07-17T15:44:05Z},
+}
+
+@article{Bourdin2000,
+  author =        {Bourdin, B. and Francfort, G.A. and Marigo, J-J.},
+  journal =       {Journal of the Mechanics and Physics of Solids},
+  month =         apr,
+  number =        {4},
+  pages =         {797--826},
+  title =         {Numerical Experiments in Revisited Brittle Fracture},
+  volume =        {48},
+  year =          {2000},
+  abstract =      {The numerical implementation of the model of brittle
+                   fracture developed in Francfort and Marigo (1998. J.
+                   Mech. Phys. Solids 46 (8), 1319{\textpm}1342) is
+                   presented. Various computational methods based on
+                   variational approximations of the original functional
+                   are proposed. They are tested on several antiplanar
+                   and planar examples that are beyond the reach of the
+                   classical computational tools of fracture mechanics.
+                   \# 2000 Elsevier Science Ltd. All rights reserved.},
+  url =           {doi:10.1016/S0022-5096(99)00028-9},
+  issn =          {00225096},
+  timestamp =     {2024-07-15T11:50:46Z},
+}
+
+@article{Ambrosio1990,
+  author =        {Ambrosio, Luigi and Tortorelli, Vincenzo Maria},
+  journal =       {Communications on Pure and Applied Mathematics},
+  month =         dec,
+  number =        {8},
+  pages =         {999--1036},
+  title =         {Approximation of Functional Depending on Jumps by
+                   Elliptic Functional via Gamma-convergence},
+  volume =        {43},
+  year =          {1990},
+  abstract =      {Abstract We show how it is possible to approximate
+                   the Mumford-Shah (see [29]) image segmentation
+                   functional magnified image by elliptic functionals
+                   defined on Sobolev spaces. The heuristic idea is to
+                   consider functionals {$G$} h ( u, z ) with z ranging
+                   between 0 and 1 and related to the set K . The
+                   minimizing z h are near to 1 in a neighborhood of the
+                   set K , and far from the neighborhood they are very
+                   small. The neighborhood shrinks as h {$\rightarrow$}
+                   + {$\infty$}. For a similar approach to the problem
+                   compare Kulkarni; see [25]. The approximation of
+                   {$G$} h to {$G$} takes place in a variational sense,
+                   the De Giorgi F-convergence.},
+  url =           {doi:10.1002/cpa.3160430805},
+  issn =          {0010-3640, 1097-0312},
+  timestamp =     {2024-07-22T17:57:33Z},
+}
+@article{kuhn_degradation_2015,
+	title = {On degradation functions in phase field fracture models},
+	volume = {108},
+	copyright = {https://www.elsevier.com/tdm/userlicense/1.0/},
+	issn = {0927-0256},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0927025615003602},
+	doi = {10.1016/j.commatsci.2015.05.034},
+	abstract = {Unlike the description of cracks as sharp surfaces which requires different criteria to predict the onset of crack propagation, the direction of crack growth, possible crack branching, and the nucleation of new cracks, the phase ﬁeld approach provides a holistic description of all these fracture processes. The phase ﬁeld order parameter is used to differentiate between broken and undamaged material, and the entire crack evolution is obtained implicitly by solving the evolution equation of the order parameter which is coupled to the mechanical ﬁeld equations. A so called degradation function couples the order parameter to the elastic properties of the material in order to model the change in stiffness between fractured and undamaged material. The nucleation of a new crack in originally undamaged material is preceded by a localization of the fracture ﬁeld. Before the onset of this localization the material response of the phase ﬁeld fracture model is mainly controlled by the degradation function. However, the degradation function frequently found in the literature yields a pronounced softening behavior before the onset of fracture which is not desirable when modeling brittle materials. In this work we discuss the potential of alternative degradation functions in the context of crack nucleation and propagation.},
+	language = {en},
+	urldate = {2025-07-11},
+	journal = {Computational Materials Science},
+	author = {Kuhn, Charlotte and Schlüter, Alexander and Müller, Ralf},
+	month = oct,
+	year = {2015},
+	note = {Publisher: Elsevier BV},
+	pages = {374--384},
+	file = {PDF:/home/diego/Zotero/storage/LHZLJ9UD/Kuhn et al. - 2015 - On degradation functions in phase field fracture models.pdf:application/pdf},
+}
+
+@article{Mumford1989,
+  author =        {Mumford, David and Shah, Jayant},
+  journal =       {Communications on Pure and Applied Mathematics},
+  month =         jul,
+  number =        {5},
+  pages =         {577--685},
+  title =         {Optimal Approximations by Piecewise Smooth Functions
+                   and Associated Variational Problems},
+  volume =        {42},
+  year =          {1989},
+  url =           {doi:10.1002/cpa.3160420503},
+  issn =          {0010-3640, 1097-0312},
+  timestamp =     {2024-04-18T04:17:25Z},
+}
+
+@article{Francfort1998,
+  author =        {Francfort, G.A. and Marigo, J.-J.},
+  journal =       {Journal of the Mechanics and Physics of Solids},
+  month =         aug,
+  number =        {8},
+  pages =         {1319--1342},
+  title =         {Revisiting Brittle Fracture as an Energy Minimization
+                   Problem},
+  volume =        {46},
+  year =          {1998},
+  url =           {doi:10.1016/S0022-5096(98)00034-9},
+  issn =          {00225096},
+  timestamp =     {2024-07-15T11:51:57Z},
+}
+@article{Inglis1913,
+  author       = {Inglis, C. E.},
+  title        = {Stresses in a Plate Due to the Presence of Cracks and Sharp Corners},
+  journal      = {Transactions of the Institution of Naval Architects},
+  volume       = {55},
+  pages        = {219--230},
+  year         = {1913},
+  month        = mar,
+  note         = {Read at the Spring meeting, March 1, 1913}
+}
+
+
+@article{Griffith1921,
+  author =        {Griffith, Alan Arnold and Taylor, Geoffrey Ingram},
+  journal =       {Philosophical Transactions of the Royal Society of
+                   London. Series A, Containing Papers of a Mathematical
+                   or Physical Character},
+  number =        {582-593},
+  pages =         {163--198},
+  publisher =     {Royal Society},
+  title =         {{{VI}}. {{The}} Phenomena of Rupture and Flow in
+                   Solids},
+  volume =        {221},
+  year =          {1921},
+  abstract =      {In the course of an investigation of the effect of
+                   surface scratches on the mechanical strength of
+                   solids, some general conclusions were reached which
+                   appear to have a direct bearing on the problem of
+                   rupture, from an engineering standpoint, and also on
+                   the larger question of the nature of intermolecular
+                   cohesion. The original object of the work, which was
+                   carried out at the Royal Aircraft Estab\-lishment,
+                   was the discovery of the effect of surface
+                   treatment---such as, for instance, filing, grinding
+                   or polishing---on the strength of metallic machine
+                   parts subjected to alternating or repeated loads. In
+                   the case of steel, and some other metals in common
+                   use, the results of fatigue tests indicated that the
+                   range of alternating stress which could be
+                   permanently sustained by the material was smaller
+                   than the range within which it was sensibly elastic,
+                   after being subjected to a great number of reversals.
+                   Hence it was inferred that the safe range of loading
+                   of a part, having a scratched or grooved surface of a
+                   given type, should be capable of estimation with the
+                   help of one of the two hypotheses of rupture commonly
+                   used for solids which are elastic to fracture.
+                   According to these hypotheses rupture may be expected
+                   if (a) the maximum tensile stress, (b) the maximum
+                   extension, exceeds a certain critical value.
+                   Moreover, as the behaviour of the materials under
+                   consideration, within the safe range of alternating
+                   stress, shows very little departure from Hooke's law,
+                   it was thought that the necessary stress and strain
+                   calculations could be performed by means of the
+                   mathematical theory of elasticity.},
+  url =           {doi:10.1098/rsta.1921.0006},
+  timestamp =     {2024-07-01T20:56:37Z},
+}
+
+@incollection{Leung2001,
+  author =        {Leung, C.K.Y.},
+  booktitle =     {Encyclopedia of {{Materials}}: {{Science}} and
+                   {{Technology}}},
+  pages =         {1471--1479},
+  publisher =     {Elsevier},
+  title =         {Concrete as a {{Building Material}}},
+  year =          {2001},
+  url =           {doi:10.1016/B0-08-043152-6/00267-9},
+  isbn =          {978-0-08-043152-9},
+  timestamp =     {2024-07-17T13:12:32Z},
+}
+
+@article{Amor2009,
+  author =        {Amor, Hanen and Marigo, Jean-Jacques and
+                   Maurini, Corrado},
+  journal =       {Journal of the Mechanics and Physics of Solids},
+  month =         aug,
+  number =        {8},
+  pages =         {1209--1229},
+  title =         {Regularized Formulation of the Variational Brittle
+                   Fracture with Unilateral Contact: {{Numerical}}
+                   Experiments},
+  volume =        {57},
+  year =          {2009},
+  abstract =      {This paper presents a modified regularized
+                   formulation of the Ambrosio--Tortorelli type to
+                   introduce the crack non-interpenetration condition in
+                   the variational approach to fracture mechanics
+                   proposed by Francfort and Marigo [1998. Revisiting
+                   brittle fracture as an energy minimization problem.
+                   J. Mech. Phys. Solids 46 (8), 1319--1342]. We focus
+                   on the linear elastic case where the contact
+                   condition appears as a local unilateral constraint on
+                   the displacement jump at the crack surfaces. The
+                   regularized model is obtained by splitting the strain
+                   energy in a spherical and a deviatoric parts and
+                   accounting for the sign of the local volume change.
+                   The numerical implementation is based on a standard
+                   finite element discretization and on the adaptation
+                   of an alternate minimization algorithm used in
+                   previous works. The new regularization avoids crack
+                   interpenetration and predicts asymmetric results in
+                   traction and in compression. Even though we do not
+                   exhibit any gamma-convergence proof toward the
+                   desired limit behavior, we illustrate through several
+                   numerical case studies the pertinence of the new
+                   model in comparison to other approaches.},
+  url =           {doi:10.1016/j.jmps.2009.04.011},
+  issn =          {00225096},
+  timestamp =     {2024-07-15T11:50:31Z},
+}
+
+@article{Lancioni2009,
+  author =        {Lancioni, Giovanni and {Royer-Carfagni}, Gianni},
+  journal =       {Journal of Elasticity},
+  month =         apr,
+  number =        {1-2},
+  pages =         {1--30},
+  title =         {The {{Variational Approach}} to {{Fracture
+                   Mechanics}}. {{A Practical Application}} to the
+                   {{French Panth{\'e}on}} in {{Paris}}},
+  volume =        {95},
+  year =          {2009},
+  abstract =      {Recently, Francfort and Marigo (J. Mech. Phys. Solids
+                   46, 1319--1342, 1998) have proposed a novel approach
+                   to fracture mechanics based upon the global
+                   minimization of a Griffith-like functional, composed
+                   of a bulk and a surface energy term. Later on the
+                   same authors, together with Bourdin, introduced (in
+                   J. Mech. Phys. Solids 48, 797--826, 2000) a
+                   variational approximation (in the sense of
+                   Gamma-convergence) of such functional, essentially for
+                   computational purposes.},
+  url =           {doi:10.1007/s10659-009-9189-1},
+  issn =          {0374-3535, 1573-2681},
+  timestamp =     {2024-07-15T11:53:23Z},
+}
+
+@article{comi_fracture_2001,
+	title = {Fracture energy based bi-dissipative damage model for concrete},
+	volume = {38},
+	copyright = {https://www.elsevier.com/tdm/userlicense/1.0/},
+	issn = {00207683},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S002076830100066X},
+	doi = {10.1016/S0020-7683(01)00066-X},
+	abstract = {An isotropic damage model for concrete is presented. The main features of the model are: limited number of constitutive parameters required;independent modelling of tension and compression behaviour by means of two damage variables and two separate activation criteria -bi-dissipative model);independent de®nition of tension and compression fracture energies by means of constitutive parameters which do not a ect the pre-peak behaviour;consistent modelling of the unilateral e ect upon transition from tension to compression. To overcome the problem of mesh dependence in the softening regime, the e ectiveness of a fracture energy based regularisation strategy is shown and the conditions for its correct application are de®ned. Comparisons of numerical simulations with experimental tests reveal the good accuracy and the robustness of the proposed model. Ó 2001 Elsevier Science Ltd. All rights reserved.},
+	language = {en},
+	number = {36-37},
+	urldate = {2025-08-13},
+	journal = {International Journal of Solids and Structures},
+	author = {Comi, Claudia and Perego, Umberto},
+	month = sep,
+	year = {2001},
+	pages = {6427--6454},
+	file = {PDF:/home/diego/Zotero/storage/4CEN8VIN/Comi and Perego - 2001 - Fracture energy based bi-dissipative damage model for concrete.pdf:application/pdf},
+}
+
+@article{comi_generalized_1996,
+	title = {A {GENERALIZED} {VARIABLE} {FORMULATION} {FOR} {GRADIENT} {DEPENDENT} {SOFTENING} {PLASTICITY}},
+	volume = {39},
+	copyright = {http://doi.wiley.com/10.1002/tdm\_license\_1.1},
+	issn = {0029-5981, 1097-0207},
+	url = {https://onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-0207(19961115)39:21<3731::AID-NME24>3.0.CO;2-Z},
+	doi = {10.1002/(SICI)1097-0207(19961115)39:21<3731::AID-NME24>3.0.CO;2-Z},
+	abstract = {A mesh-independent finite element method for elastoplastic problems with softening is proposed. The regularizationof the boundary value problem is achieved introducing in the yield function the second order gradient of the plastic multiplier. The backward-differenceintegrated finite-stepproblem enriched with the gradient term is given a variationalformulationwhere the consitutiveequations are treated in weak form as well as the other field equations.A predictor-corrector scheme is proposed for the solution of the non-linear algebraic problem resulting from the finite element discretization of the functional. The expression of the consistent tangent matrix is provided and the corrector phase is formulated as a Linear Complementarity Problem. The effectiveness of the proposed methodology is verified by one- and two-dimensionaltests.},
+	language = {en},
+	number = {21},
+	urldate = {2025-08-13},
+	journal = {International Journal for Numerical Methods in Engineering},
+	author = {Comi, C. and Perego, U.},
+	month = nov,
+	year = {1996},
+	pages = {3731--3755},
+	file = {PDF:/home/diego/Zotero/storage/2JQ8MTR3/Comi and Perego - 1996 - A GENERALIZED VARIABLE FORMULATION FOR GRADIENT DEPENDENT SOFTENING PLASTICITY.pdf:application/pdf},
+}
+
+@article{comi_numerical_2001,
+	title = {Numerical aspects of nonlocal damage analyses},
+	volume = {10},
+	issn = {1250-6559},
+	url = {https://www.tandfonline.com/doi/full/10.1080/12506559.2001.11869249},
+	doi = {10.1080/12506559.2001.11869249},
+	abstract = {Constitutive models based on nonlocal variables provide an effective and mechanically sound solution to the ill-posedness of the boundary value problem in the presence of damage induced softening. However, the averaging of constitutive variables entails other computational problems like the lack of symmetry of the tangent operator in a finite element approximation. ln the present paper, an isotropie local damage madel with symmetric tangent matrix is presented. Two alternative nonlocal versions of the same madel are comparative/y discussed. ft is shawn how the symmetry of the tangent matrix in the finite element approximation can be preserved formulating the nonlocal madel within the context of the thermodynamic nonlocal theory recent/y proposed by Borino et al. The computational implications of the adopted regularization technique are discussed by means ofa simple onedimensional example.},
+	language = {en},
+	number = {2-4},
+	urldate = {2025-08-13},
+	journal = {Revue Européenne des Éléments Finis},
+	author = {Comi, Claudia and Perego, Umberto},
+	month = jan,
+	year = {2001},
+	pages = {227--242},
+	file = {PDF:/home/diego/Zotero/storage/QY3ZXU2D/Comi and Perego - 2001 - Numerical aspects of nonlocal damage analyses.pdf:application/pdf},
+}
+
+@article{Miehe2010,
+  author =        {Miehe, Christian and Hofacker, Martina and
+                   Welschinger, Fabian},
+  journal =       {Computer Methods in Applied Mechanics and
+                   Engineering},
+  month =         nov,
+  number =        {45-48},
+  pages =         {2765--2778},
+  title =         {A Phase Field Model for Rate-Independent Crack
+                   Propagation: {{Robust}} Algorithmic Implementation
+                   Based on Operator Splits},
+  volume =        {199},
+  year =          {2010},
+  url =           {doi:10.1016/j.cma.2010.04.011},
+  issn =          {00457825},
+  timestamp =     {2024-06-27T13:22:46Z},
+}
+
+@article{Vicentini2024,
+  author =        {Vicentini, F. and Zolesi, C. and Carrara, P. and
+                   Maurini, C. and De Lorenzis, L.},
+  journal =       {International Journal of Fracture},
+  month =         apr,
+  title =         {On the Energy Decomposition in Variational
+                   Phase-Field Models for Brittle Fracture under
+                   Multi-Axial Stress States},
+  year =          {2024},
+  abstract =      {Abstract Phase-field models of brittle fracture are
+                   typically endowed with a decomposition of the elastic
+                   strain energy density in order to realistically
+                   describe fracture under multi-axial stress states. In
+                   this contribution, we identify the essential
+                   requirements for this decomposition to correctly
+                   describe both nucleation and propagation of cracks.
+                   Discussing the evolution of the elastic domains in
+                   the strain and stress spaces as damage evolves, we
+                   highlight the links between the nucleation and
+                   propagation conditions and the modulation of the
+                   elastic energy with the phase-field variable. In
+                   light of the identified requirements, we review some
+                   of the existing energy decompositions, showcasing
+                   their merits and limitations, and conclude that none
+                   of them is able to fulfil all requirements. As a
+                   partial remedy to this outcome, we propose a new
+                   energy decomposition, denoted as star-convex model,
+                   which involves a minimal modification of the
+                   volumetric-deviatoric decomposition. Predictions of
+                   the star-convex model are compared with those of the
+                   existing models with different numerical tests
+                   encompassing both nucleation and propagation.},
+  url =           {doi:10.1007/s10704-024-00763-w},
+  issn =          {0376-9429, 1573-2673},
+  timestamp =     {2024-06-27T13:34:07Z},
+}
+
+@article{Strobl2015,
+  author =        {Strobl, Michael and Seelig, Thomas},
+  journal =       {PAMM},
+  month =         oct,
+  number =        {1},
+  pages =         {155--156},
+  title =         {A Novel Treatment of Crack Boundary Conditions in
+                   Phase Field Models of Fracture},
+  volume =        {15},
+  year =          {2015},
+  abstract =      {Abstract In the phase field approach for fracture an
+                   additional scalar field is introduced in order to
+                   describe the state of the material between intact and
+                   fully broken. So far, for the loading dependent
+                   degradation of stiffness (damage) either the
+                   volumetric-deviatoric split of strain [1, 2] or the
+                   spectral decomposition [3, 4] is used. In contrast to
+                   such an isotropic degradation of stiffness, the fully
+                   broken state represents a crack with a particular
+                   orientation. Both aforementioned approaches do not
+                   take the crack orientation into account. This may
+                   lead to the violation of the crack boundary
+                   conditions. In order to satisfy these conditions the
+                   phase field approach is modified here by taking the
+                   orientation of the crack into account. ({\copyright}
+                   2015 Wiley-VCH Verlag GmbH \& Co. KGaA, Weinheim)},
+  url =           {doi:10.1002/pamm.201510068},
+  issn =          {1617-7061, 1617-7061},
+  timestamp =     {2024-06-27T13:22:45Z},
+}
+
+@article{Strobl2016,
+  author =        {Strobl, Michael and Seelig, Thomas},
+  journal =       {Procedia Structural Integrity},
+  pages =         {3705--3712},
+  title =         {On Constitutive Assumptions in Phase Field Approaches
+                   to Brittle Fracture},
+  volume =        {2},
+  year =          {2016},
+  abstract =      {During their operation, modern aircraft engine
+                   components are subjected to increasingly demanding
+                   operating conditions, especially the high pressure
+                   turbine (HPT) blades. Such conditions cause these
+                   parts to undergo different types of time-dependent
+                   degradation, one of which is creep. A model using the
+                   finite element method (FEM) was developed, in order
+                   to be able to predict the creep behaviour of HPT
+                   blades. Flight data records (FDR) for a specific
+                   aircraft, provided by a commercial aviation company,
+                   were used to obtain thermal and mechanical data for
+                   three different flight cycles. In order to create the
+                   3D model needed for the FEM analysis, a HPT blade
+                   scrap was scanned, and its chemical composition and
+                   material properties were obtained. The data that was
+                   gathered was fed into the FEM model and different
+                   simulations were run, first with a simplified 3D
+                   rectangular block shape, in order to better establish
+                   the model, and then with the real 3D mesh obtained
+                   from the blade scrap. The overall expected behaviour
+                   in terms of displacement was observed, in particular
+                   at the trailing edge of the blade. Therefore such a
+                   model can be useful in the goal of predicting turbine
+                   blade life, given a set of FDR data.},
+  url =           {doi:10.1016/j.prostr.2016.06.460},
+  issn =          {24523216},
+  timestamp =     {2024-06-27T13:23:06Z},
+}
+
+@article{Steinke2019,
+  author =        {Steinke, Christian and Kaliske, Michael},
+  journal =       {Computational Mechanics},
+  month =         may,
+  number =        {5},
+  pages =         {1019--1046},
+  title =         {A Phase-Field Crack Model Based on Directional Stress
+                   Decomposition},
+  volume =        {63},
+  year =          {2019},
+  abstract =      {Phase-field crack approximation relies on the proper
+                   definition of the crack driving strain energy density
+                   to govern the crack evolution and a realistic model
+                   for the modified stresses on the crack surface. A
+                   novel approach, the directional split, is introduced,
+                   analyzed and compared to the two commonly used
+                   formulations, which are the spectral split and the
+                   volumetric--deviatoric split. The directional split
+                   is based on the decomposition of the stress tensor
+                   with respect to the crack orientation, specified by a
+                   local crack coordinate system, into crack driving and
+                   persistent components. Accordingly, a modified stress
+                   strain relation is proposed to model fundamental
+                   crack characteristics properly, and a
+                   thermodynamically consistent crack driving strain
+                   energy density is postulated. The split is applied to
+                   numerical examples of initially cracked specimens and
+                   compared to results obtained by the two standard
+                   approaches.},
+  url =           {doi:10.1007/s00466-018-1635-0},
+  issn =          {0178-7675, 1432-0924},
+  timestamp =     {2024-06-27T13:17:10Z},
+}
+
+@article{Storm2019,
+  author =        {Storm, J. and Supriatna, D. and Kaliske, M.},
+  journal =       {International Journal for Numerical Methods in
+                   Engineering},
+  number =        {5},
+  pages =         {779--805},
+  title =         {The Concept of Representative Crack Elements for
+                   Phase-field Fracture: {{Anisotropic}} Elasticity and
+                   Thermo-elasticity},
+  volume =        {121},
+  year =          {2019},
+  abstract =      {The realistic representation of material degradation
+                   at a fully evolved crack is still one of the main
+                   challenges of the phase-field method for fracture. An
+                   approach with realistic degradation behavior is only
+                   available for isotropic elasticity in the small
+                   deformation framework. In this paper, a variational
+                   framework is presented for the standard phase-field
+                   formulation, which allows to derive the kinematically
+                   consistent material degradation. For this purpose,
+                   the concept of representative crack elements (RCE) is
+                   introduced to analyze the fully degraded material
+                   state. The realistic material degradation is further
+                   tested using the self-consistency condition, where
+                   the behavior of the phase-field model is compared to
+                   a discrete crack model. The framework is applied to
+                   isotropic elasticity, anisotropic elasticity and
+                   thermo-elasticity, but not restricted to these
+                   constitutive formulations.},
+  url =           {doi:10.1002/nme.6244},
+  issn =          {0029-5981, 1097-0207},
+  timestamp =     {2024-07-18T13:25:41Z},
+}
+
+@article{Takei2013,
+  author =        {Takei, Atsushi and Roman, Beno{\^i}t and
+                   Bico, Jos{\'e} and Hamm, Eugenio and Melo, Francisco},
+  journal =       {Physical Review Letters},
+  month =         apr,
+  number =        {14},
+  pages =         {144301},
+  title =         {Forbidden {{Directions}} for the {{Fracture}} of
+                   {{Thin Anisotropic Sheets}}: {{An Analogy}} with the
+                   {{Wulff Plot}}},
+  volume =        {110},
+  year =          {2013},
+  url =           {doi:10.1103/PhysRevLett.110.144301},
+  issn =          {0031-9007, 1079-7114},
+  timestamp =     {2024-07-23T13:20:27Z},
+}
+
+@article{Taylor1998,
+  author =        {Taylor, Jean E. and Cahn, John W.},
+  journal =       {Physica D: Nonlinear Phenomena},
+  month =         feb,
+  number =        {3-4},
+  pages =         {381--411},
+  title =         {Diffuse Interfaces with Sharp Corners and Facets:
+                   {{Phase}} Field Models with Strongly Anisotropic
+                   Surfaces},
+  volume =        {112},
+  year =          {1998},
+  url =           {doi:10.1016/S0167-2789(97)00177-2},
+  issn =          {01672789},
+  timestamp =     {2024-07-22T14:53:30Z},
+}
+
+@article{Cahn1958,
+  author =        {Cahn, John W. and Hilliard, John E.},
+  journal =       {The Journal of Chemical Physics},
+  month =         feb,
+  number =        {2},
+  pages =         {258--267},
+  title =         {Free {{Energy}} of a {{Nonuniform System}}. {{I}}.
+                   {{Interfacial Free Energy}}},
+  volume =        {28},
+  year =          {1958},
+  abstract =      {It is shown that the free energy of a volume V of an
+                   isotropic system of nonuniform composition or density
+                   is given by : NV{$\int$}V
+                   [f0(c)+{$\kappa$}(▿c)2]dV, where NV is the number
+                   of molecules per unit volume, ▿c the composition or
+                   density gradient, f0 the free energy per molecule of
+                   a homogeneous system, and {$\kappa$} a parameter
+                   which, in general, may be dependent on c and
+                   temperature, but for a regular solution is a constant
+                   which can be evaluated. This expression is used to
+                   determine the properties of a flat interface between
+                   two coexisting phases. In particular, we find that
+                   the thickness of the interface increases with
+                   increasing temperature and becomes infinite at the
+                   critical temperature Tc, and that at a temperature T
+                   just below Tc the interfacial free energy {$\sigma$}
+                   is proportional to (Tc-T)32. The predicted
+                   interfacial free energy and its temperature
+                   dependence are found to be in agreement with existing
+                   experimental data. The possibility of using optical
+                   measurements of the interface thickness to provide an
+                   additional check of our treatment is briefly
+                   discussed.},
+  url =           {doi:10.1063/1.1744102},
+  issn =          {0021-9606, 1089-7690},
+  timestamp =     {2024-07-22T16:35:30Z},
+}
+
+@article{Li2015,
+  author =        {Li, Bin and Peco, Christian and Mill{\'a}n, Daniel and
+                   Arias, Irene and Arroyo, Marino},
+  journal =       {International Journal for Numerical Methods in
+                   Engineering},
+  month =         apr,
+  number =        {3-4},
+  pages =         {711--727},
+  title =         {Phase-field Modeling and Simulation of Fracture in
+                   Brittle Materials with Strongly Anisotropic Surface
+                   Energy},
+  volume =        {102},
+  year =          {2015},
+  abstract =      {Crack propagation in brittle materials with
+                   anisotropic surface energy is important in
+                   applications involving single crystals, extruded
+                   polymers, or geological and organic materials.
+                   Furthermore, when this anisotropy is strong, the
+                   phenomenology of crack propagation becomes very rich,
+                   with forbidden crack propagation directions or
+                   complex sawtooth crack patterns. This problem
+                   interrogates fundamental issues in fracture
+                   mechanics, including the principles behind the
+                   selection of crack direction. Here, we propose a
+                   variational phase-field model for strongly
+                   anisotropic fracture, which resorts to the extended
+                   Cahn-Hilliard framework proposed in the context of
+                   crystal growth. Previous phase-field models for
+                   anisotropic fracture were formulated in a framework
+                   only allowing for weak anisotropy. We implement
+                   numerically our higher-order phase-field model with
+                   smooth local maximum entropy approximants in a direct
+                   Galerkin method. The numerical results exhibit all
+                   the features of strongly anisotropic fracture and
+                   reproduce strikingly well recent experimental
+                   observations. Copyright {\copyright} 2014 John Wiley
+                   \& Sons, Ltd.},
+  url =           {doi:10.1002/nme.4726},
+  issn =          {0029-5981, 1097-0207},
+  timestamp =     {2024-07-18T18:20:45Z},
+}
+
+@article{Teichtmeister2017,
+  author =        {Teichtmeister, S. and Kienle, D. and Aldakheel, F. and
+                   Keip, M.-A.},
+  journal =       {International Journal of Non-Linear Mechanics},
+  month =         dec,
+  pages =         {1--21},
+  title =         {Phase Field Modeling of Fracture in Anisotropic
+                   Brittle Solids},
+  volume =        {97},
+  year =          {2017},
+  abstract =      {A phase field model of fracture that accounts for
+                   anisotropic material behavior at small and large
+                   deformations is outlined within this work. Most
+                   existing fracture phase field models assume crack
+                   evolution within isotropic solids, which is not a
+                   meaningful assumption for many natural as well as
+                   engineered materials that exhibit
+                   orientation-dependent behavior. The incorporation of
+                   anisotropy into fracture phase field models is for
+                   example necessary to properly describe the typical
+                   sawtooth crack patterns in strongly anisotropic
+                   materials. In the present contribution, anisotropy is
+                   incorporated in fracture phase field models in
+                   several ways: (i) Within a pure geometrical approach,
+                   the crack surface density function is adopted by a
+                   rigorous application of the theory of tensor
+                   invariants leading to the definition of structural
+                   tensors of second and fourth order. In this work we
+                   employ structural tensors to describe transverse
+                   isotropy, orthotropy and cubic anisotropy. Latter
+                   makes the incorporation of second gradients of the
+                   crack phase field necessary, which is treated within
+                   the finite element context by a nonconforming Morley
+                   triangle. Practically, such a geometric approach
+                   manifests itself in the definition of anisotropic
+                   effective fracture length scales. (ii) By use of
+                   structural tensors, energetic and stresslike failure
+                   criteria are modified to account for inherent
+                   anisotropies. These failure criteria influence the
+                   crack driving force, which enters the crack phase
+                   field evolution equation and allows to set up a
+                   modular structure. We demonstrate the performance of
+                   the proposed anisotropic fracture phase field model
+                   by means of representative numerical examples at
+                   small and large deformations.},
+  url =           {doi:10.1016/j.ijnonlinmec.2017.06.018},
+  issn =          {00207462},
+  timestamp =     {2024-06-27T13:23:10Z},
+}
+
+@article{Li2019,
+  author =        {Li, Bin and Maurini, Corrado},
+  journal =       {Journal of the Mechanics and Physics of Solids},
+  month =         apr,
+  pages =         {502--522},
+  title =         {Crack Kinking in a Variational Phase-Field Model of
+                   Brittle Fracture with Strongly Anisotropic Surface
+                   Energy},
+  volume =        {125},
+  year =          {2019},
+  abstract =      {In strongly anisotropic materials the
+                   orientation-dependent fracture surface energy is a
+                   non-convex function of the crack angle. In this
+                   context, the classical Griffith model becomes
+                   ill-posed and requires a regularization. We revisit
+                   the crack kinking problem in materials with strongly
+                   anisotropic surface energies by using a variational
+                   phase-field model. The model includes in the energy
+                   functional a quadratic term on the second gradient of
+                   the phase-field. This term has a regularizing effect,
+                   energetically penalizing the crack curvature. We
+                   provide analytical formulas for the dependence of the
+                   surface energy on the crack direction and develop an
+                   open-source finite-element solver for the
+                   higher-order phase-field problem. Quantitative
+                   numerical experiments for the crack kinking problem
+                   show that the crack kinking directions observed in
+                   our phase-field simulations are in close agreement
+                   with the generalized maximum energy release rate
+                   criterion. Finally, we revisit a thermal quenching
+                   experiment in the case of slabs with strongly
+                   anisotropic surface energies. We show that the
+                   anisotropy can strongly affect the observed crack
+                   patterns, either by stabilizing straight cracks or by
+                   inducing zig-zag crack patterns. In the case of
+                   zig-zag cracks, we observe that crack kinking is
+                   always associated with an unstable propagation of a
+                   finite length add-crack in a single time-step.},
+  url =           {doi:10.1016/j.jmps.2019.01.010},
+  issn =          {00225096},
+  timestamp =     {2024-07-22T20:27:04Z},
+}
+
+@article{Borden2012,
+  author =        {Borden, Michael J. and Verhoosel, Clemens V. and
+                   Scott, Michael A. and Hughes, Thomas J.R. and
+                   Landis, Chad M.},
+  journal =       {Computer Methods in Applied Mechanics and
+                   Engineering},
+  month =         apr,
+  pages =         {77--95},
+  title =         {A Phase-Field Description of Dynamic Brittle
+                   Fracture},
+  volume =        {217--220},
+  year =          {2012},
+  abstract =      {In contrast to discrete descriptions of fracture,
+                   phase-field descriptions do not require numerical
+                   tracking of discontinuities in the displacement
+                   field. This greatly reduces implementation
+                   complexity. In this work, we extend a phase-field
+                   model for quasi-static brittle fracture to the
+                   dynamic case. We introduce a phase-field
+                   approximation to the Lagrangian for discrete fracture
+                   problems and derive the coupled system of equations
+                   that govern the motion of the body and evolution of
+                   the phase-field. We study the behavior of the model
+                   in one dimension and show how it influences material
+                   properties. For the temporal discretization of the
+                   equations of motion, we present both a monolithic and
+                   staggered time integration scheme. We study the
+                   behavior of the dynamic model by performing a number
+                   of two and three dimensional numerical experiments.
+                   We also introduce a local adaptive refinement
+                   strategy and study its performance in the context of
+                   locally refined T-splines. We show that the
+                   combination of the phase-field model and local
+                   adaptive refinement provides an effective method for
+                   simulating fracture in three dimensions.},
+  url =           {doi:10.1016/j.cma.2012.01.008},
+  issn =          {00457825},
+  timestamp =     {2024-06-27T13:17:10Z},
+}
+
+@article{Gerasimov2022,
+  author =        {Gerasimov, Tymofiy and De Lorenzis, Laura},
+  journal =       {Computer Methods in Applied Mechanics and
+                   Engineering},
+  month =         feb,
+  pages =         {114403},
+  title =         {Second-Order Phase-Field Formulations for Anisotropic
+                   Brittle Fracture},
+  volume =        {389},
+  year =          {2022},
+  abstract =      {We address brittle fracture in anisotropic materials
+                   featuring two-fold and four-fold symmetric fracture
+                   toughness. For these two classes, we develop two
+                   variational phase-field models based on the family of
+                   regularizations proposed by Focardi (2001), for which
+                   {$\Gamma$} -convergence results hold. Since both
+                   models are of second order, as opposed to the
+                   previously available fourth-order models for
+                   four-fold symmetric fracture toughness, they do not
+                   require basis functions of C1-continuity nor mixed
+                   variational principles for finite element
+                   discretization. For the four-fold symmetric
+                   formulation we show that the standard quadratic
+                   degradation function is unsuitable and devise a
+                   procedure to derive a suitable one. The performance
+                   of the new models is assessed via several numerical
+                   examples that simulate anisotropic fracture under
+                   anti-plane shear loading. For both formulations at
+                   fixed displacements (i.e. within an alternate
+                   minimization procedure), we also provide some
+                   existence and uniqueness results for the phase-field
+                   solution.},
+  url =           {doi:10.1016/j.cma.2021.114403},
+  issn =          {00457825},
+  timestamp =     {2024-07-18T17:21:55Z},
+}
+
+@article{Focardi2001,
+  author =        {Focardi, M.},
+  journal =       {Mathematical Models and Methods in Applied Sciences},
+  month =         jun,
+  number =        {04},
+  pages =         {663--684},
+  title =         {On the Variational Approximation of
+                   Free-Discontinuity Problems in the Vectorial Case},
+  volume =        {11},
+  year =          {2001},
+  abstract =      {We provide a variational approximation for
+                   quasiconvex energies defined on vector valued special
+                   functions with bounded variation. We extend the
+                   Ambrosio--Tortorelli's construction to the vectorial
+                   case.},
+  url =           {doi:10.1142/S0218202501001045},
+  issn =          {0218-2025, 1793-6314},
+  timestamp =     {2024-07-22T17:57:51Z},
+}
+
+@article{Nguyen2020,
+  author =        {Nguyen, Thanh-Tung and Yvonnet, Julien and
+                   Waldmann, Dani{\`e}le and He, Qi-Chang},
+  journal =       {International Journal for Numerical Methods in
+                   Engineering},
+  month =         nov,
+  number =        {21},
+  pages =         {4717--4733},
+  title =         {Implementation of a New Strain Split to Model
+                   Unilateral Contact within the Phase Field Method},
+  volume =        {121},
+  year =          {2020},
+  abstract =      {A new orthogonal split of strain tensor into
+                   compressive and tensile parts is implemented within
+                   the phase field model to mimic unilateral contact
+                   condition with which any existing cracks and any
+                   crack propagation have to comply. The resulting phase
+                   field model offers several advantages as compared to
+                   other available schemes. First, it involves rigorous
+                   orthogonality between traction and compression parts.
+                   Second, it yields remarkably simple, new analytical
+                   expressions of the projectors which provide
+                   computational saving during the crack propagation
+                   simulation. Finally, it can be applied to arbitrary
+                   initial elastic anisotropic media, which is not the
+                   case of other available strain tensor split
+                   operators. A detailed comparison of the fracture
+                   responses predicted by the present model and other
+                   approaches is provided. It is shown that the present
+                   orthogonal decomposition is able to accurately
+                   predict experimental results and removes spurious
+                   effects found in other schemes for specific loads
+                   like compression.},
+  url =           {doi:10.1002/nme.6463},
+  issn =          {0029-5981, 1097-0207},
+  timestamp =     {2024-06-27T13:22:29Z},
+}
+
+
+@article{schreiber2021,
+	title = {A {Phase} {Field} {Modeling} {Approach} of {Crack} {Growth} in {Materials} with {Anisotropic} {Fracture} {Toughness}},
+	volume = {89},
+	copyright = {Creative Commons Attribution 4.0 International license, info:eu-repo/semantics/openAccess},
+	issn = {2190-6807},
+	url = {https://drops.dagstuhl.de/entities/document/10.4230/OASIcs.iPMVM.2020.9},
+	doi = {10.4230/OASICS.IPMVM.2020.9},
+	abstract = {Within this contribution, we present a diffuse interface approach for the simulation of crack nucleation and growth in materials, which incorporates an orientation dependency of the fracture toughness. After outlining the basic motivation for the model from an engineering standpoint, the phase field paradigm for fracture is introduced. Further, a specific phase field model for brittle fracture is reviewed, where we focus on the meaning of the auxiliary parameter differentiating between material phases and the coupling of such a parameter to continuum equations in order to obtain the characteristic self organizing model properties. This specific model, as will be explained, provides the phenomenological and methodical basis for the presented enhancement. The formulation of an appropriate evolution equation in terms of a Ginzburg-Landau type equation will be highlighted and several comments on sharp interface models will be made to present a brief comparison. Following up on the basics we then introduce the formulation of a modified version of the model, which additionally to the handling of cracks in linear elastic materials under quasi static loading is also capable of taking into account the effect of resistance variation with respect to the potential crack extension direction. The strong and also the weak forms of the respective governing equations corresponding to the developed anisotropic phase field model are presented. Utilizing the weak formulation as starting point for the discretization of the two fields (displacement field and the phase field), the computational framework in terms of finite elements is introduced. We finally explain several test cases investigated within simulations and discuss the corresponding numerical results. Besides examples, which are set up to illustrate the general model properties, a comparison with crack paths obtained by experimental investigations will be presented in order to show the potential of the developed phase field model.},
+	language = {en},
+	urldate = {2025-05-24},
+	journal = {OASIcs, Volume 89, iPMVM 2020},
+	author = {Schreiber, Christoph and Ettrich, Tim and Kuhn, Charlotte and Müller, Ralf},
+	editor = {Garth, Christoph and Aurich, Jan C. and Linke, Barbara and Müller, Ralf and Ravani, Bahram and Weber, Gunther and Kirsch, Benjamin},
+	year = {2021},
+	note = {Artwork Size: 17 pages, 1727017 bytes
+ISBN: 9783959771832
+Medium: application/pdf
+Publisher: Schloss Dagstuhl – Leibniz-Zentrum für Informatik},
+	keywords = {Anisotropic fracture toughness, Applied computing → Physical sciences and engineering, Brittle fracture, Finite elements, Phase field modeling},
+	pages = {9:1--9:17},
+	annote = {SeriesInformation
+OASIcs, Vol. 89, 2nd International Conference of the DFG International Research Training Group 2057 – Physical Modeling for Virtual Manufacturing (iPMVM 2020), pages 9:1-9:17},
+	file = {PDF:/home/diego/Zotero/storage/NP2UUGH7/Schreiber et al. - 2021 - A Phase Field Modeling Approach of Crack Growth in Materials with Anisotropic Fracture Toughness.pdf:application/pdf},
+}
+
+@article{scherer2022,
+	title = {An assessment of anisotropic phase-field models of brittle fracture},
+	volume = {395},
+	issn = {0045-7825},
+	url = {https://www.sciencedirect.com/science/article/pii/S0045782522002572},
+	doi = {10.1016/j.cma.2022.115036},
+	abstract = {In several classes of ductile and brittle materials consisting of different cleavage planes, an orientation dependency of the fracture process is observed. It leads for instance to complex failure behaviours and crack paths in polycrystalline or architected materials. This paper focuses on modelling anisotropy of brittle fracture by means of a variational phase-field approach. More precisely, we study different models including several phase (or damage) variables corresponding to different damage mechanisms. First, we recall a multi-mechanism gradient damage model based on an anisotropic non-local fracture energy. We then consider a model accounting for an anisotropic degradation of the elasticity stiffness tensor. Both types of anisotropies are compared in terms of their influence on analytical homogeneous solutions under uniaxial and biaxial tensile loadings. Weak and strong anisotropies are captured via the chosen multi-mechanism damage framework. The models are implemented numerically by using a finite element discretization. In order to improve numerical performance, we implement an algorithm based on a hybrid direct–iterative resolution of the displacement sub-problem. Accuracy of model prediction is assessed by comparing numerical results to theoretical solutions under uniaxial loading. Benchmark numerical tests on notched and perforated plates highlight the role of material parameters on the fracture anisotropy. Furthermore, both models are able to retrieve zig-zag crack patterns observed in prior numerical and experimental studies. Finally, we discuss the predictions of a model combining both types of anisotropies.},
+	urldate = {2025-05-24},
+	journal = {Computer Methods in Applied Mechanics and Engineering},
+	author = {Scherer, Jean-Michel and Brach, Stella and Bleyer, Jérémy},
+	month = may,
+	year = {2022},
+	keywords = {Anisotropic brittle fracture, Multi-mechanism gradient damage models, Toughness anisotropy, Variational phase-field approach to fracture},
+	pages = {115036},
+	file = {ScienceDirect Snapshot:/home/diego/Zotero/storage/XG5UH26H/S0045782522002572.html:text/html;Submitted Version:/home/diego/Zotero/storage/3SDBJZLY/Scherer et al. - 2022 - An assessment of anisotropic phase-field models of brittle fracture.pdf:application/pdf},
+}
+
+@article{nguyen2017,
+	title = {Multi-phase-field modeling of anisotropic crack propagation for polycrystalline materials},
+	volume = {60},
+	issn = {0178-7675, 1432-0924},
+	url = {http://link.springer.com/10.1007/s00466-017-1409-0},
+	doi = {10.1007/s00466-017-1409-0},
+	abstract = {A new multi-phase-ﬁeld method is developed for modeling the fracture of polycrystals at the microstructural level. Inter and transgranular cracking, as well as anisotropic eﬀects of both elasticity and preferential cleavage directions within each randomly oriented crystal are taken into account. For this purpose, the proposed phase ﬁeld formulation includes: (a) a smeared description of grain boundaries as cohesive zones avoiding deﬁning an additional phase for grains; (b) an anisotropic phase ﬁeld model; (c) a multi-phase ﬁeld formulation where each preferential cleavage direction is associated with a damage (phase ﬁeld) variable. The obtained framework allows modeling interactions and competition between grains and grain boundary cracks, as well as their eﬀects on the eﬀective response of the material. The proposed model is illustrated through several numerical examples involving a full description of complex crack initiation and propagation within 2D and 3D models of polycrystals.},
+	language = {en},
+	number = {2},
+	urldate = {2025-05-24},
+	journal = {Computational Mechanics},
+	author = {Nguyen, Thanh-Tung and Réthoré, Julien and Yvonnet, Julien and Baietto, Marie-Christine},
+	month = aug,
+	year = {2017},
+	pages = {289--314},
+	file = {PDF:/home/diego/Zotero/storage/SIGGYPMZ/Nguyen et al. - 2017 - Multi-phase-field modeling of anisotropic crack propagation for polycrystalline materials.pdf:application/pdf},
+}
+
+@article{zhang2020,
+	title = {A new phase field fracture model for brittle materials that accounts for elastic anisotropy},
+	volume = {358},
+	issn = {00457825},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0045782519305274},
+	doi = {10.1016/j.cma.2019.112643},
+	abstract = {In this manuscript, a new phase field model of brittle fracture is proposed that accounts for any elastic anisotropy using spectral decomposition of the stress. To verify the model, both Mode I and Mode II fracture simulations were performed to ensure that the correct crack paths were predicted. Next, the fracture of face-centered cubic (FCC) and hexagonal close packed (HCP) single crystals was modeled, comparing the impact of crystal orientation on the stress–strain curve. Third, fracture in an HCP bicrystal was simulated and the impact of crystal orientation on the crack paths and stress–strain curves was studied. Finally, a polycrystal structure was simulated to study the impact of crystallographic texture on transgranular fracture.},
+	language = {en},
+	urldate = {2025-06-02},
+	journal = {Computer Methods in Applied Mechanics and Engineering},
+	author = {Zhang, Shuaifang and Jiang, Wen and Tonks, Michael R.},
+	month = jan,
+	year = {2020},
+	pages = {112643},
+	file = {PDF:/home/diego/Zotero/storage/EA5RN3EP/Zhang et al. - 2020 - A new phase field fracture model for brittle materials that accounts for elastic anisotropy.pdf:application/pdf},
+}
+
+
+@article{zhang2022,
+	title = {Assessment of four strain energy decomposition methods for phase field fracture models using quasi-static and dynamic benchmark cases},
+	volume = {6},
+	issn = {2509-8012},
+	url = {https://doi.org/10.1186/s41313-021-00037-1},
+	doi = {10.1186/s41313-021-00037-1},
+	abstract = {Strain energy decomposition methods in phase field fracture models separate strain energy that contributes to fracture from that which does not. However, various decomposition methods have been proposed in the literature, and it can be difficult to determine an appropriate method for a given problem. The goal of this work is to facilitate the choice of strain decomposition method by assessing the performance of three existing methods (spectral decomposition of the stress or the strain and deviatoric decomposition of the strain) and one new method (deviatoric decomposition of the stress) with several benchmark problems. In each benchmark problem, we compare the performance of the four methods using both qualitative and quantitative metrics. In the first benchmark, we compare the predicted mechanical behavior of cracked material. We then use four quasi-static benchmark cases: a single edge notched tension test, a single edge notched shear test, a three-point bending test, and a L-shaped panel test. Finally, we use two dynamic benchmark cases: a dynamic tensile fracture test and a dynamic shear fracture test. All four methods perform well in tension, the two spectral methods perform better in compression and with mixed mode (though the stress spectral method performs the best), and all the methods show minor issues in at least one of the shear cases. In general, whether the strain or the stress is decomposed does not have a significant impact on the predicted behavior.},
+	number = {1},
+	journal = {Materials Theory},
+	author = {Zhang, Shuaifang and Jiang, Wen and Tonks, Michael R.},
+	month = jan,
+	year = {2022},
+	pages = {6},
+}
+
+@article{wu_2019,
+	title = {Phase-ﬁeld modelling of fracture},
+	language = {en},
+	author = {Wu, Jian-Ying and Nguyen, Vinh Phu and Nguyen, Chi Thanh and Sutula, Danas and Sinaie, Sina and Bordas, Stephane},
+	file = {PDF:/home/diego/Zotero/storage/J6TBRZRV/Wu et al. - Phase-ﬁeld modelling of fracture.pdf:application/pdf},
+  urldate = {2025-06-02},
+  month = mar,
+	year = {2019},
+}
+
+
+@article{luo2022,
+	title = {A phase-field fracture model for brittle anisotropic materials},
+	volume = {70},
+	issn = {0178-7675, 1432-0924},
+	url = {https://link.springer.com/10.1007/s00466-022-02192-9},
+	doi = {10.1007/s00466-022-02192-9},
+	abstract = {Anisotropy is inherent in many materials, either because of the manufacturing process, or due to their microstructure, and can markedly inﬂuence the failure behavior. Anisotropic materials obviously possess both anisotropic elasticity and anisotropic fracture surface energy. Phase-ﬁeld methods are elegant and mathematically well-grounded, and have become popular for simulating isotropic and anisotropic brittle fracture. Here, we developed a variational phase-ﬁeld model for strongly anisotropic fracture, which accounts for the anisotropy both in elastic strain energy and in fracture surface energy, and the asymmetric behavior of cracks in traction and in compression. We implement numerically our higher-order phase-ﬁeld model with mixed ﬁnite element, inspired by formulations for plate/shell elements, where similar continuity requirements exist. For strongly anisotropic materials, as reported in the recent experiments, one could obtain several crack propagation directions for a given loading conﬁguration, depending on imperfections of the initial crack. From an energy point of view, the selection of crack propagation direction is dictated by local principle of the generalized maximum energy release rate. Herein, for the ﬁrst time we examine numerically this local principle, reproduce the crack behaviors observed in recent experiments. Numerical simulations exhibit all the features of strongly anisotropic fracture.},
+	language = {en},
+	number = {5},
+	urldate = {2025-06-02},
+	journal = {Computational Mechanics},
+	author = {Luo, Zhiheng and Chen, Lin and Wang, Nan and Li, Bin},
+	month = nov,
+	year = {2022},
+	pages = {931--943},
+	file = {PDF:/home/diego/Zotero/storage/62XKSDNN/Luo et al. - 2022 - A phase-field fracture model for brittle anisotropic materials.pdf:application/pdf},
+}
+
+
+
+@article{jain_2023,
+	title = {Adaptive phase-field modeling of fracture in orthotropic composites},
+	volume = {292},
+	issn = {00137944},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0013794423006318},
+	doi = {10.1016/j.engfracmech.2023.109673},
+	abstract = {An adaptive phase-field method is developed and applied to model fracture propagation in orthotropic composites. The proposed approach extends the work of Muixí et al. (2020) to orthotropic composites through following modifications: (a) elastic tensor is evaluated in the global coordinate system from a given engineering stiffness matrix in the principal material coordinates, (b) strain energy density is additively decomposed into fiber and matrix-dominated modes, and (c) a penalized second-order structural tensor is introduced in the phase-field equation facilitating preferential damage growth along the fiber orientation. The developed approach is validated through several benchmark examples and available experimental results. Several numerical failure experiments are conducted varying fiber orientation, adhesive layer thickness, shear modulus, and fracture toughness. A large increase in ductility and peakload carrying capacity is observed for laminate configurations where the fibers are oriented such that the principal material coordinates and the global coordinates are aligned. An increase in the adhesive layer’s fracture toughness increases the macroscopic ductility and prevents catastrophic failure of laminate. The results of this study provide valuable insights into the failure mechanisms in orthotropic composites.},
+	language = {en},
+	urldate = {2025-06-19},
+	journal = {Engineering Fracture Mechanics},
+	author = {Jain, Ishank and Muixí, Alba and Annavarapu, Chandrasekhar and Mulay, Shantanu S. and Rodríguez-Ferran, Antonio},
+	month = nov,
+	year = {2023},
+	pages = {109673},
+	file = {PDF:/home/diego/Zotero/storage/7E7Q7JSL/Jain et al. - 2023 - Adaptive phase-field modeling of fracture in orthotropic composites.pdf:application/pdf},
+}
+
+@article{sakha_2024,
+	title = {Phase-field approach for precise fracture tracking in anisotropic rocks: {Integrating} orthotropy-based energy decomposition and two-fold symmetric fracture toughness},
+	volume = {311},
+	issn = {00137944},
+	shorttitle = {Phase-field approach for precise fracture tracking in anisotropic rocks},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0013794424007069},
+	doi = {10.1016/j.engfracmech.2024.110543},
+	abstract = {Rock formations are known to exhibit material anisotropy, both in terms of elastic and fracture properties. This means that the fracture path in such formations is not a priori known but rather a complex unknown that requires robust numerical techniques to predict accurately. In this context, the phase-field model is considered particularly effective, provided that certain physical considerations are carefully adjusted to align with the physics of the problem. While addressing elastic anisotropy is well-established, the tension–compression asymmetry necessary to inhibit crack interpenetration in phase-field fracture models needs to account for the specific material anisotropy. Additionally, to accurately capture crack propagation, it is critical to simultaneously account for orientation-dependent fracture toughness in such materials. To address this, the present study employs an anisotropic phase-field model that integrates the generalized spectral decomposition proposed in the literature for orthotropic materials with a two-fold symmetric fracture toughness, to predict the fracture trajectories in rock-type samples under fixed mixed-mode loading ratios. While each of the two aspects has primarily been applied to model orthotropic plates under simple tensile and shearing loading conditions in the literature, here we study their applicability in complex loading scenarios. To this end, the experimental data from notched semi-circular specimens of Grimsel Granite undergoing complex mixed-mode loading obtained in our previous work is considered. We focus on two given mode-mixity ratios and perform numerical studies. Our results emphasize the importance of considering this generalized decomposition for phase-field modeling of fracturing in rocktype materials, particularly under loading conditions where the crack might otherwise be unrealistically driven into the compressive region. Although certain features are well captured by considering anisotropy in elasticity alone, our findings demonstrate that incorporating a two-fold symmetric fracture toughness proves to be advantageous for more precise tracking of the fracture path.},
+	language = {en},
+	urldate = {2025-06-20},
+	journal = {Engineering Fracture Mechanics},
+	author = {Sakha, Mahsa and Nagaraja, Sindhu and Driesner, Thomas},
+	month = nov,
+	year = {2024},
+	pages = {110543},
+	file = {PDF:/home/diego/Zotero/storage/M8URUNQP/Sakha et al. - 2024 - Phase-field approach for precise fracture tracking in anisotropic rocks Integrating orthotropy-base.pdf:application/pdf},
+}
+
+@article{zhang_2019,
+	title = {Phase field modeling of fracture in fiber reinforced composite laminate},
+	volume = {161-162},
+	issn = {00207403},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0020740318341729},
+	doi = {10.1016/j.ijmecsci.2019.07.007},
+	abstract = {A new phase method for predicting crack propagation path and mechanical response of ﬁber reinforced composite laminate is proposed. A new three-dimensional (3D) crack surface density function considering material anisotropy is proposed for composite laminates. The explicit relationship between the model penalty parameter (MPP) in a standard anisotropic phase ﬁeld method and the material properties is solved analytically. This relationship is then used to construct a new expression of driving force in phase ﬁeld model to account for longitudinal, transverse normal and transverse shear cracks in composite laminates. The proposed method is implemented into the commercial software ABAQUS through user subroutine user deﬁned element (UEL). Numerical methods on both two-dimensional (2D) lamina and 3D angle ply laminate are provided. The present predictions are in good agreement with the experimental and other numerical results.},
+	language = {en},
+	urldate = {2025-06-20},
+	journal = {International Journal of Mechanical Sciences},
+	author = {Zhang, Peng and Hu, Xiaofei and Bui, Tinh Quoc and Yao, Weian},
+	month = oct,
+	year = {2019},
+	pages = {105008},
+	file = {PDF:/home/diego/Zotero/storage/UZ95ENTC/Zhang et al. - 2019 - Phase field modeling of fracture in fiber reinforced composite laminate.pdf:application/pdf},
+}
+
+
+
+
+
+@inproceedings{trotter2023,
+	address = {Denver CO USA},
+	title = {Bringing {Order} to {Sparsity}: {A} {Sparse} {Matrix} {Reordering} {Study} on {Multicore} {CPUs}},
+	isbn = {979-8-4007-0109-2},
+	shorttitle = {Bringing {Order} to {Sparsity}},
+	url = {https://dl.acm.org/doi/10.1145/3581784.3607046},
+	doi = {10.1145/3581784.3607046},
+	abstract = {Many real-world computations involve sparse data structures in the form of sparse matrices. A common strategy for optimizing sparse matrix operations is to reorder a matrix to improve data locality. However, it’s not always clear whether reordering will provide benefits over the unordered matrix, as its effectiveness depends on several factors, such as structural features of the matrix, the reordering algorithm and the hardware that is used. This paper aims to establish the relationship between matrix reordering algorithms and the performance of sparse matrix operations. We thoroughly evaluate six different matrix reordering algorithms on 490 matrices across eight multicore architectures, focusing on the commonly used sparse matrix-vector multiplication (SpMV) kernel. We find that reordering based on graph partitioning provides better SpMV performance than the alternatives for a large majority of matrices, and that the resulting performance is explained through a combination of data locality and load balancing concerns.},
+	language = {en},
+	urldate = {2025-06-02},
+	booktitle = {Proceedings of the {International} {Conference} for {High} {Performance} {Computing}, {Networking}, {Storage} and {Analysis}},
+	publisher = {ACM},
+	author = {Trotter, James D. and Ekmekçibaşı, Sinan and Langguth, Johannes and Torun, Tugba and Düzakın, Emre and Ilic, Aleksandar and Unat, Didem},
+	month = nov,
+	year = {2023},
+	pages = {1--13},
+	file = {PDF:/home/diego/Zotero/storage/A6879WFW/Trotter et al. - 2023 - Bringing Order to Sparsity A Sparse Matrix Reordering Study on Multicore CPUs.pdf:application/pdf},
+}
+
+
+@article{Dijk2020,
+  author =        {Dijk, N.P. Van and {Espadas-Escalante}, J.J. and
+                   Isaksson, P.},
+  journal =       {International Journal of Solids and Structures},
+  month =         jul,
+  pages =         {140--153},
+  title =         {Strain Energy Density Decompositions in Phase-Field
+                   Fracture Theories for Orthotropy and Anisotropy},
+  volume =        {196--197},
+  year =          {2020},
+  abstract =      {In phase-field theories of fracture, decompositions
+                   of the strain energy density into tensile and
+                   compressive parts are often necessary to avoid
+                   interpenetration of cracked surfaces and to select
+                   physically trustworthy crack paths. General
+                   formulations accounting for orthotropy of the
+                   well-known spectral and hydrostatic-deviatoric
+                   decompositions of the strain tensor (often referred
+                   to as Miehe and Amor decompositions) are presented in
+                   this study. Additionally, a new principal energy
+                   decomposition based on spectral decomposition of the
+                   stiffness tensor is proposed for general anisotropic
+                   materials. The decompositions are evaluated
+                   numerically in a quadratic specimen with an initial
+                   stationary edge crack subject to both tensile and
+                   shear global remote loading. It is shown that when an
+                   isotropic case is considered, solutions agree well
+                   with results reported elsewhere for both the spectral
+                   and the hydrostatic-deviatoric approaches. The
+                   principal energy decomposition results in similar
+                   crack paths as the other approaches, with only subtle
+                   differences. When orthotropy is considered, however,
+                   significant differences in the resulting crack paths
+                   as well as global force-displacement behavior are
+                   obtained, especially when the crack is subjected to
+                   shear loading. For global tensile loading, the
+                   decompositions result in similar crack paths and
+                   force-displacement relations. The results provide a
+                   step forward when developing phase-field fracture
+                   theories for brittle materials with an orthotropic
+                   nature and highlight the importance of a proper
+                   decomposition of the strain energy density.},
+  url =           {doi:10.1016/j.ijsolstr.2020.04.022},
+  issn =          {00207683},
+  timestamp =     {2024-07-15T14:19:32Z},
+}
+
+@article{Gmati2020,
+  author =        {Gmati, Hela and Mareau, Charles and Ammar, Amine and
+                   El Arem, Saber},
+  journal =       {International Journal for Numerical Methods in
+                   Engineering},
+  month =         aug,
+  number =        {15},
+  pages =         {3362--3381},
+  title =         {A Phase-field Model for Brittle Fracture of
+                   Anisotropic Materials},
+  volume =        {121},
+  year =          {2020},
+  abstract =      {In the present work, a phase field damage model is
+                   developed to address the numerical simulation of
+                   brittle fracture. This model successfully captures
+                   some important aspects of crack propagation,
+                   including crack branching and bifurcation. In
+                   addition, the proposed phase field model has been
+                   developed in the general framework of anisotropic
+                   elasticity. It can thus be used for the simulation of
+                   brittle fracture in polycrystalline materials, for
+                   which crack propagation is impacted by
+                   crystallographic orientation because of the
+                   anisotropic character of stiffness properties.},
+  url =           {doi:10.1002/nme.6361},
+  issn =          {0029-5981, 1097-0207},
+  timestamp =     {2024-07-23T15:19:38Z},
+}
+
+@article{Ziaei-Rad2023,
+  author =        {{Ziaei-Rad}, Vahid and Mollaali, Mostafa and
+                   Nagel, Thomas and Kolditz, Olaf and Yoshioka, Keita},
+  journal =       {Journal of the Mechanics and Physics of Solids},
+  month =         feb,
+  pages =         {105143},
+  title =         {Orthogonal Decomposition of Anisotropic Constitutive
+                   Models for the Phase Field Approach to Fracture},
+  volume =        {171},
+  year =          {2023},
+  abstract =      {We propose a decomposition of constitutive relations
+                   into crack-driving and persistent portions,
+                   specifically designed for materials with
+                   anisotropic/orthotropic behavior in the phase field
+                   approach to fracture to account for the
+                   tension--compression asymmetry. This decomposition
+                   follows a variational framework, satisfying the
+                   orthogonality condition for anisotropic materials.
+                   This implies that the present model can be applied to
+                   arbitrary anisotropic elastic behavior in a
+                   three-dimensional setting. On this basis, we
+                   generalize two existing models for
+                   tension--compression asymmetry in isotropic
+                   materials, namely the `volumetric--deviatoric' model
+                   (Amor et al., 2009) and the `no-tension' model
+                   (Freddi and Royer-Carfagni, 2010), towards materials
+                   with anisotropic nature. Two benchmark problems,
+                   single notched tensile and shear tests, are used to
+                   study the performance of the present model. The
+                   results can retain the anisotropic constitutive
+                   behavior and the tension--compression asymmetry in
+                   the crack response, and are qualitatively in
+                   accordance with the expected behavior for orthotropic
+                   materials. Furthermore, to study the direction of
+                   maximum energy dissipation, we modify the surface
+                   integral based energy release computation,
+                   {$G\theta$}, to account only for the crack-driving
+                   energy. The computed energies with our proposed
+                   modifications predict the fracture propagation
+                   direction correctly compared with the standard
+                   {$G\theta$} method.},
+  url =           {doi:10.1016/j.jmps.2022.105143},
+  issn =          {00225096},
+  timestamp =     {2024-06-27T13:33:30Z},
+}
+
+@article{bharali2022,
+	title = {A robust monolithic solver for phase-field fracture integrated with fracture energy based arc-length method and under-relaxation},
+	volume = {394},
+	issn = {00457825},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0045782522001992},
+	doi = {10.1016/j.cma.2022.114927},
+	abstract = {The phase-field fracture free-energy functional is non-convex with respect to the displacement and the phase field. This results in a poor performance of the conventional monolithic solvers like the Newton–Raphson method. In order to circumvent this issue, researchers opt for the alternate minimization (staggered) solvers. Staggered solvers are robust for the phase-field based fracture simulations as the displacement and the phase-field sub-problems are convex in nature. Nevertheless, the staggered solver requires very large number of iterations (of the order of thousands) to converge. In this work, a robust monolithic solver is presented for the phase-field fracture problem. The solver adopts a fracture energy-based arc-length method and an adaptive under-relaxation scheme. The arc-length method enables the simulation to overcome critical points (snap-back, snap-through instabilities) during the loading of a specimen. The use of an under-relaxation scheme stabilizes the solver by preventing the divergence due to an ill-behaving stiffness matrix. The efficiency of the proposed solver is further amplified with an adaptive mesh refinement scheme based on PHT-splines within the framework of isogeometric analysis. The numerical experiments presented in the manuscript demonstrate the efficacy of the solver. All the codes and data-sets accompanying this work will be made available on GitHub (https://github.com/rbharali/IGAFrac).},
+	language = {en},
+	urldate = {2025-06-02},
+	journal = {Computer Methods in Applied Mechanics and Engineering},
+	author = {Bharali, Ritukesh and Goswami, Somdatta and Anitescu, Cosmin and Rabczuk, Timon},
+	month = may,
+	year = {2022},
+	pages = {114927},
+	file = {PDF:/home/diego/Zotero/storage/8HY6IPXG/Bharali et al. - 2022 - A robust monolithic solver for phase-field fracture integrated with fracture energy based arc-length.pdf:application/pdf},
+}
+
+
+@article{Petrini2023,
+  author =        {Petrini, A.L.E.R. and Esteves, C.L.C.S. and
+                   Boldrini, J.L. and Bittencourt, M.L.},
+  journal =       {Forces in Mechanics},
+  month =         aug,
+  pages =         {100224},
+  title =         {A Fourth-Order Degradation Tensor for an Anisotropic
+                   Damage Phase-Field Model},
+  volume =        {12},
+  year =          {2023},
+  url =           {doi:10.1016/j.finmec.2023.100224},
+  issn =          {26663597},
+  timestamp =     {2024-07-23T18:01:18Z},
+}
+
+@misc{PetscWebPage,
+  author =        {Balay, Satish and Abhyankar, Shrirang and
+                   Adams, Mark F. and Benson, Steven and Brown, Jed and
+                   Brune, Peter and Buschelman, Kris and
+                   Constantinescu, Emil M. and Dalcin, Lisandro and
+                   Dener, Alp and Eijkhout, Victor and
+                   Faibussowitsch, Jacob and Gropp, William D. and
+                   Hapla, V{\'a}clav and Isaac, Tobin and
+                   Jolivet, Pierre and Karpeev, Dmitry and
+                   Kaushik, Dinesh and Knepley, Matthew G. and
+                   Kong, Fande and Kruger, Scott and May, Dave A. and
+                   McInnes, Lois Curfman and Mills, Richard Tran and
+                   Mitchell, Lawrence and Munson, Todd and
+                   Roman, Jose E. and Rupp, Karl and Sanan, Patrick and
+                   Sarich, Jason and Smith, Barry F. and
+                   Zampini, Stefano and Zhang, Hong and Zhang, Hong and
+                   Zhang, Junchao},
+  title =         {{{PETSc Web}} Page},
+  year =          {2024},
+  timestamp =     {2024-07-23T20:01:30Z},
+}
+
+@article{Gmsh,
+  author =        {Geuzaine, Christophe and Remacle, Jean-Fran{\c c}ois},
+  journal =       {International Journal for Numerical Methods in
+                   Engineering},
+  month =         sep,
+  number =        {11},
+  pages =         {1309--1331},
+  title =         {Gmsh: {{A}} 3-{{D}} Finite Element Mesh Generator
+                   with Built-in Pre- and Post-processing Facilities},
+  volume =        {79},
+  year =          {2009},
+  abstract =      {Gmsh is an open-source 3-D finite element grid
+                   generator with a build-in CAD engine and
+                   post-processor. Its design goal is to provide a fast,
+                   light and user-friendly meshing tool with parametric
+                   input and advanced visualization capabilities. This
+                   paper presents the overall philosophy, the main
+                   design choices and some of the original algorithms
+                   implemented in Gmsh. Copyright q 2009 John Wiley \&
+                   Sons, Ltd.},
+  url =           {doi:10.1002/nme.2579},
+  issn =          {0029-5981, 1097-0207},
+  timestamp =     {2024-07-23T20:02:14Z},
+}
+
+@incollection{ParaView,
+  address =       {Burlington, MA, USA},
+  author =        {Ahrens, James and Geveci, Berk and Law, Charles},
+  chapter =       {ParaView: An End-User Tool for Large Data
+                   Visualization},
+  editor =        {Hansen, Charles D. and Johnson, Christopher R.},
+  pages =         {717--731},
+  publisher =     {Elsevier Inc.},
+  title =         {Visualization Handbook},
+  year =          {2005},
+  timestamp =     {2024-07-23T19:56:22Z},
+}
+
+@misc{HDF5,
+  author =        {{The HDF Group}},
+  title =         {{Hierarchical Data Format, version 5}},
+  year =          {2024},
+  howpublished =  {\url{https://www.hdfgroup.org/HDF5/}},
+  note =          {If you use this software, please cite it using the metadata from this file. Repository: \url{https://github.com/HDFGroup/hdf5}},
+}

@@ -1,0 +1,445 @@
+\section{Results}
+
+\begin{frame}
+  \centering
+  \vfill
+  \begin{beamercolorbox}[sep=14pt,center,rounded=true,shadow=true,wd=\textwidth]{frametitle}
+    \usebeamerfont{frametitle}\LARGE Results
+  \end{beamercolorbox}
+  \vfill
+\end{frame}
+
+
+\begin{frame}{}
+    \frametitle{Physical Properties for Benchmark Examples}
+    \vspace{-1em}
+        \begin{figure}
+        \centering
+        \caption{Benchmarks.}
+          \begin{subfigure}[b]{0.19\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/5/sen1_mesh.png}
+        \end{subfigure}
+        \hspace{1.5em}
+        \begin{subfigure}[b]{0.19\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/5/sen2_mesh.png}
+        \end{subfigure}
+        \hspace{1.5em}
+        \begin{subfigure}[b]{0.19\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/5/Lshaped_mesh.png}
+        \end{subfigure}
+        \hspace{1.5em}
+        \begin{subfigure}[b]{0.19\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/5/holed_mesh.png}
+        \end{subfigure}\\
+        \begin{subfigure}[b]{0.19\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/5/sen1_bc.png}
+        \end{subfigure}
+        \hspace{1.5em}
+        \begin{subfigure}[b]{0.19\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/5/sen2_bc.png}
+        \end{subfigure}
+        \hspace{1.5em}
+        \begin{subfigure}[b]{0.19\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/5/Lshaped_bc.png}
+        \end{subfigure}
+        \hspace{1.5em}
+        \begin{subfigure}[b]{0.19\textwidth}
+          \centering
+          \includegraphics[width=\textwidth]{figs/5/holed_bc.png}
+        \end{subfigure}
+        \\\caption*{Authors.}
+      \end{figure}
+
+\end{frame}
+
+\subsection{Single Edge Notch Mode I}
+\begin{frame}{}
+    \frametitle{Single Edge Notch Mode I}
+    \vspace{-1em}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \caption{Geometry and boundary conditions.}
+                \begin{subfigure}[b]{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{figs/5/sen1_mesh.png}
+                    \end{subfigure}
+                \begin{subfigure}[b]{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{figs/5/sen1_bc.png}
+                \end{subfigure}
+                \\\fonte{ \citeonline{Ferreira2024}.}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.55\textwidth}
+        Imposed cyclic displacement
+            \[
+                \Delta \bar{u}_n =
+                \begin{cases}
+                4 \times 10^{-3} \text{ mm} & \text{if } 1 \leq n \leq 20 \\
+                -4 \times 10^{-4} \text{ mm} & \text{if } 21 \leq n \leq 60 \\
+                4 \times 10^{-4} \text{ mm} & \text{if } 61 \leq n \leq 80
+                \end{cases} 
+                .
+            \]
+        \end{column}
+    \end{columns}
+    \begin{table}
+        \centering
+        \caption{Physical properties for benchmark examples.}
+        \begin{tabular}{c@{\hspace{3.5em}}c@{\hspace{3.5em}}c@{\hspace{3.5em}}c@{\hspace{3.5em}}c}
+        \hline
+        Example & $E$ GPa & $\nu$ & $G_c$ N/mm & $\ell_0$ mm   \\
+        \hline
+        SEN Mode I & 210 & 0.3 & 2.7 & 0.01 \\
+        \hline
+        \end{tabular}
+        \fonte{Authors.}
+        \label{tab:numerical_tests}
+    \end{table} 
+\end{frame}
+
+
+\begin{frame}{}
+  \vspace{-2em}
+    \begin{columns}[t] % Add top alignment
+        \begin{column}{0.55\textwidth} % Reduce width
+            \begin{figure}
+            \centering
+            \caption{Specimen with load reversal.}
+            
+            \begin{subfigure}[b]{0.4\textwidth} 
+                \centering
+                \includegraphics[width=\textwidth]{figs/5/damageScale.png}
+            \end{subfigure}
+
+            \begin{subfigure}[b]{0.55\textwidth} 
+                \centering
+                \animategraphics[loop,autoplay,width=\textwidth]{10}{figs/5/sen1/result.}{0000}{0079}            
+            \end{subfigure}
+            \\\fonte{Authors.}
+            \end{figure}
+        \end{column}
+        \hspace{-3em} 
+        \begin{column}{0.5\textwidth} 
+          \vspace{2em} 
+          \begin{figure}
+            \caption{Reaction forces.}
+            \centering
+            \animategraphics[loop,autoplay,width=0.9\textwidth]{10}{figs/5/sen1/frame_}{0002}{0081}            
+            \\\fonte{Authors.}
+          \end{figure}
+        \end{column}
+      \end{columns}
+\end{frame}
+
+
+\subsection{Single Edge Notch Mode II}
+\begin{frame}{}
+    \frametitle{Single Edge Notch Mode II}
+    \vspace{-1em}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \caption{Geometry and boundary conditions.}
+                \begin{subfigure}[b]{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{figs/5/sen2_mesh.png}
+                \end{subfigure}
+                \begin{subfigure}[b]{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{figs/5/sen2_bc.png}
+                \end{subfigure}
+                \\\fonte{ \citeonline{Ferreira2024}.}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.55\textwidth}
+            The imposed cyclic loading for this case is:
+            \[
+                \Delta \bar{u}_n =
+                \begin{cases}
+                1 \times 10^{-3} \text{ mm} & \text{if } 1 \leq n \leq 6 \\
+                3 \times 10^{-4} \text{ mm} & \text{if } 7 \leq n \leq 26  \\
+                -3 \times 10^{-4} \text{ mm} & \text{if } 27 \leq n \leq 106  \\
+                3 \times 10^{-4} \text{ mm} & \text{if } 107 \leq n \leq 146 
+                \end{cases} 
+                 \quad .
+            \]
+        \end{column}
+    \end{columns}
+    \begin{table}
+        \centering
+        \caption{Physical properties for benchmark examples.}
+        \begin{tabular}{c@{\hspace{3.5em}}c@{\hspace{3.5em}}c@{\hspace{3.5em}}c@{\hspace{3.5em}}c}
+        \hline
+        Example & $E$ GPa & $\nu$ & $G_c$ N/mm & $\ell_0$ mm   \\
+        \hline
+        SEN Mode II & 210 & 0.3 & 2.7 & 0.01 \\
+        \hline
+        \end{tabular}
+        \fonte{Authors.}
+        \label{tab:numerical_tests}
+    \end{table} 
+\end{frame}
+
+\begin{frame}{}
+  \vspace{-2em}
+    \begin{columns}[t] % Add top alignment
+        \begin{column}{0.55\textwidth} % Reduce width
+            \begin{figure}
+            \centering
+            \caption{Specimen with load reversal.}
+            
+            \begin{subfigure}[b]{0.4\textwidth} 
+                \centering
+                \includegraphics[width=\textwidth]{figs/5/damageScale.png}
+            \end{subfigure}
+
+            \begin{subfigure}[b]{0.55\textwidth} 
+                \centering
+                \animategraphics[loop,autoplay,width=\textwidth]{10}{figs/5/sen2/result.}{0000}{0145}            
+            \end{subfigure}
+            \\\fonte{Authors.}
+            \end{figure}
+        \end{column}
+        \hspace{-3em} 
+        \begin{column}{0.5\textwidth} 
+          \vspace{2em} 
+          \begin{figure}
+            \caption{Reaction forces.}
+            \centering
+            \animategraphics[loop,autoplay,width=0.9\textwidth]{10}{figs/5/sen2/frame_}{0002}{0147}            
+            \\\fonte{Authors.}
+          \end{figure}
+        \end{column}
+      \end{columns}
+\end{frame}
+
+
+\subsection{L-Shaped Specimen}
+\begin{frame}{}
+    \frametitle{L-Shaped Specimen}
+    \vspace{-1em}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \caption{Geometry and boundary conditions.}
+                \begin{subfigure}[b]{0.42\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{figs/5/Lshaped_mesh.png}
+                \end{subfigure}
+                \begin{subfigure}[b]{0.42\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{figs/5/Lshaped_bc.png}
+                \end{subfigure}
+                \caption{ \citeonline{Ferreira2024}.}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.55\textwidth}
+            Subjected to the following displacement history:
+            \[
+                \Delta \bar{u}_n =
+                \begin{cases}
+                1 \times 10^{-2} \text{ mm} & \text{if } 1 \leq n \leq 36  \\
+                -3 \times 10^{-2} \text{ mm} & \text{if } 37 \leq n \leq 48  \\
+                -1 \times 10^{-2} \text{ mm} & \text{if } 49 \leq n \leq 84  \\
+                3 \times 10^{-2} \text{ mm} & \text{if } 85 \leq n \leq 96  
+                \end{cases} 
+                \quad .
+            \]
+        \end{column}
+    \end{columns}   
+    \vspace{-1em}
+    \begin{table}
+        \centering
+        \caption{Physical properties for benchmark examples.}
+        \begin{tabular}{c@{\hspace{3.5em}}c@{\hspace{3.5em}}c@{\hspace{3.5em}}c@{\hspace{3.5em}}c}
+        \hline
+        Example & $E$ GPa & $\nu$ & $G_c$ N/mm & $\ell_0$ mm   \\
+        \hline
+        L-Shaped & 25.85 & 0.18 & 0.095 & 5.0 \\
+        \hline
+        \end{tabular}
+        \fonte{Authors.}
+        \label{tab:numerical_tests}
+    \end{table} 
+\end{frame}
+
+\begin{frame}{}
+    \frametitle{L-Shaped Specimen}
+    \begin{figure}[H]
+  \centering
+  \caption{L-Shaped - Specimen with load reversal. AT1 phase‐field contours at three different time steps (or last converged step for the Vol–Dev split).}
+  
+  % Damage scale at the top
+  \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figs/5/damageScale.png}
+  \end{subfigure}
+  
+  
+  % Table structure for organized layout
+  \begin{tabular}{ccc}
+    \multicolumn{3}{c}{\textbf{Vol-Dev}} \\
+    \hline
+    \begin{subfigure}[b]{0.30\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figs/5/Lshaped_25_voldev.png}
+      \caption{Time step 25.}
+    \end{subfigure} &
+    \begin{subfigure}[b]{0.30\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figs/5/Lshaped_36_voldev.png}
+      \caption{Time step 36.}
+    \end{subfigure} &
+    \begin{subfigure}[b]{0.30\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figs/5/Lshaped_61last_voldev.png}
+      \caption{Last converged step (61).}
+    \end{subfigure} 
+    \\
+    \multicolumn{3}{c}{\textbf{Gradient}} \\
+      \hline
+    \begin{subfigure}[b]{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figs/5/Lshaped_25_grad.png}
+      \caption{Time step 25.}
+    \end{subfigure} &
+    \begin{subfigure}[b]{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figs/5/Lshaped_36_grad.png}
+      \caption{Time step 36.}
+    \end{subfigure} &
+    \begin{subfigure}[b]{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figs/5/Lshaped_96_grad.png}
+      \caption{Time step 96.}
+    \end{subfigure} 
+  \end{tabular}
+  \fonte{Authors.}
+  \label{fig:lshapedresults}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \caption{L-Shaped - Reaction force at the prescribed displacement face.}
+    \includegraphics[width=0.7\textwidth]{figs/5/Lshaped_reactiony.pdf}
+    \fonte{Authors.}
+    \label{fig:lshapedreaction}
+\end{figure}
+
+
+\end{frame}
+
+\subsection{Holed Plate Specimen}
+\begin{frame}{}
+    \frametitle{Holed Plate Specimen}
+    \vspace{-1em}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \caption{Geometry and boundary conditions.}
+                \begin{subfigure}[b]{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{figs/5/holed_mesh.png}
+                \end{subfigure}
+                \begin{subfigure}[b]{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{figs/5/holed_bc.png}
+                \end{subfigure}
+                \\\caption{ \citeonline{Ferreira2024}.}
+            \end{figure}
+        \end{column}    
+        \begin{column}{0.55\textwidth}
+            The imposed cyclic loading is specified as:
+            \[
+                \Delta \bar{u}_n =
+                \begin{cases}
+                1 \times 10^{-2} \text{ mm} & \text{if } 1 \leq n \leq 301 \\
+                3 \times 10^{-2} \text{ mm} & \text{if } 302 \leq n \leq 903 
+                \end{cases} 
+                \quad .
+            \]
+        \end{column}
+    \end{columns}
+    \vspace{-1em}
+    \begin{table}
+        \centering
+        \caption{Physical properties for benchmark examples.}
+        \begin{tabular}{c@{\hspace{3.5em}}c@{\hspace{3.5em}}c@{\hspace{3.5em}}c@{\hspace{3.5em}}c}
+        \hline
+        Example & $E$ GPa & $\nu$ & $G_c$ N/mm & $\ell_0$ mm   \\
+        \hline
+        Holed Plate & 210 & 0.3 & 2.7 & 0.02 \\
+        \hline
+        \end{tabular}
+        \fonte{Authors.}
+        \label{tab:numerical_tests}
+    \end{table} 
+\end{frame}
+
+\begin{frame}{}
+    \frametitle{Holed Plate Specimen}
+    \begin{figure}[H]
+  \centering
+  \caption{Holed Plate - Specimen with load reversal. AT1 phase‐field contours at different time steps (or last converged step for the Vol–Dev split).}
+  % Damage scale at the top
+  \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figs/5/damageScale.png}
+  \end{subfigure}
+  % Table structure for organized layout
+  \begin{tabular}{ccc}
+    \multicolumn{3}{c}{\textbf{Vol-Dev}} \\
+    \hline
+    &
+    \begin{subfigure}[b]{0.30\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figs/5/holed_56_voldev.png}
+      \caption{Last converged step (56).}
+    \end{subfigure} 
+    &\\
+    \multicolumn{3}{c}{\textbf{Gradient}} \\
+      \hline
+    \begin{subfigure}[b]{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figs/5/holed_301_grad.png}
+      \caption{Time step 301.}
+    \end{subfigure} &
+    \begin{subfigure}[b]{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figs/5/holed_602_grad.png}
+      \caption{Time step 602.}
+    \end{subfigure} &
+    \begin{subfigure}[b]{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figs/5/holed_903_grad.png}
+      \caption{Time step 903.}
+    \end{subfigure} \\
+  \end{tabular}
+  \\\fonte{Authors.}
+  \label{fig:holedresults}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \caption{Holed Plate Specimen - Vertical reaction of the analyzed quarter.}
+    \includegraphics[width=0.7\textwidth]{figs/5/holed_reactiony.pdf}
+    \\\fonte{Authors.}
+    \label{fig:holedreaction}
+\end{figure}
+
+
+\end{frame}
+
+
+

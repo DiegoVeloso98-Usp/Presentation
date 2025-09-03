@@ -1,0 +1,47 @@
+\section{Partial Conclusions}
+
+\begin{frame}
+  \centering
+  \vfill
+  \begin{beamercolorbox}[sep=14pt,center,rounded=true,shadow=true,wd=\textwidth]{frametitle}
+    \usebeamerfont{frametitle}\LARGE Partial Conclusions
+  \end{beamercolorbox}
+  \vfill
+\end{frame}
+
+
+
+
+\begin{frame}{}
+    \frametitle{Results}
+
+    The main contributions of this thesis are:
+\begin{itemize}[label=\textbullet]
+  \item Anisotropic phase-field damage formulation for elastic and fracture \textbf{anisotropy}.
+  \item A parallel FEM code using \textbf{HPC} techniques and tools.
+  \item Identification of model-implementation \textbf{limitations} and proposals for \textbf{extensions} (e.g., Drucker-Prager criteria and alternative energy splits).
+\end{itemize}
+
+The following key observations were made:
+
+\begin{itemize}[label=\textbullet]
+  \item The model closely \textbf{approximated the crack path and peak load} within the \textit{Vol-Dev} model reference.
+  \item The model \textbf{captured the load reversal} behavior accurately.
+  \item The model is directly \textbf{extensible to anisotropic materials}.
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{}
+    \frametitle{Results}
+
+Despite the successful implementation and validation, some limitations remain:
+\begin{itemize}[label=\textbullet]
+  \item \textbf{Fixing \(H^-\) during staggered iterations.} In the current staggered solution strategy the negative Heaviside field \(H^-\) is held fixed until the minimum residual is reached, unlike the volumetric–deviatoric (Vol–Dev) split where \(H^-\) is allowed to evolve.
+  \item \textbf{Energy split formulation and compressive fracture.} The present energy split does not represent fracture initiation under primarily compressive stress states. A possible remedy is to incorporate a Drucker–Prager type criterion.
+  \item \textbf{Solver and scalability improvements.} While MPI provides good scalability, introducing better preconditioners and iterative solvers could further improve performance.
+\end{itemize}
+
+\end{frame}

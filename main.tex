@@ -1,0 +1,401 @@
+\documentclass[usenames,dvipsnames,aspectratio=169]{beamer}
+%__________________________________________________________
+%
+% T H E M E S   A N D   F O R M A T T I N G
+%__________________________________________________________
+% 
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%General theme and fonts
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Darmstadt, Dresden, Berlin, *Frankfurt*, Ilmenau, Copenhagen, Bergen, Berkeley, Madrid
+\usetheme{Frankfurt}
+
+\usecolortheme{default}
+\usefonttheme[onlymath]{serif}
+\setbeamercolor{footline}{fg=blue}
+\setbeamerfont{footline}{series=\bfseries}
+
+% ...existing code...
+\setbeamercolor{footline}{fg=white,bg=blue!70!black} % <-- add bg here
+\setbeamerfont{footline}{series=\bfseries,size=\tiny}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.7\paperwidth,ht=2.5ex,dp=1ex,left]{footline}%
+      \hspace{2ex}\usebeamerfont{footline}\insertshorttitle
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.5ex,dp=1ex,right]{footline}%
+      \usebeamerfont{footline}\insertframenumber/\inserttotalframenumber\hspace{2ex}
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+% ...existing code...
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%General configurations
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\setbeamertemplate{items}[square]        % keep/restore square bullets
+% \setbeamertemplate{itemize item}[square] % ensure item template is square
+% \setbeamertemplate{itemize subitem}[circle]
+% \setbeamercolor{itemize item}{fg=black}       % force bullet color (choose black or structure.fg)
+% \setbeamercolor{itemize subitem}{fg=black}
+
+\setbeamertemplate{section in toc}[square]
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=3mm,text margin right=3mm}
+
+\setbeamertemplate{subsection in head/foot}{} % clears the subsection strip
+\setbeamertemplate{miniframes}{}    
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Break frame of bibliography into parts
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\setbeamertemplate{frametitle continuation}[from second]
+\setbeamertemplate{bibliography item}{}
+%__________________________________________________________
+%
+% P A C K A G E S
+%__________________________________________________________
+%
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Language and encodings
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Tables and items
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{multirow} 
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage[table]{xcolor}   % provides \cellcolor (used in your timeline table)
+\usepackage{colortbl}        % optional, improves table coloring
+\usepackage{adjustbox}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Text formatting
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\usepackage{indentfirst}
+\usepackage{microtype}
+\usepackage{color}
+\usepackage{ulem}
+\usepackage{cancel}
+\usepackage{mdframed}
+\usepackage{framed}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Figures
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\usepackage{graphicx}
+\usepackage[footnotesize]{caption}
+\usepackage{subcaption}
+\usepackage{grffile}
+\usepackage{ragged2e}
+\usepackage{animate}
+\usepackage{media9}
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Math
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\usepackage{array}
+\usepackage{blkarray}
+\usepackage{amsmath, bm, bbm}
+\usepackage{amsfonts, latexsym, amssymb}
+\usepackage{isomath}
+\usepackage{accents}
+\usepackage{mathtools}
+% \usepackage[linesnumbered, ruled]{algorithm2e}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}   % provides algorithmic, \State, \For, \Require, etc.
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Placement of objects
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\usepackage{float}
+\usepackage{placeins}
+% ...existing code...
+\usepackage[font=footnotesize]{caption} % already present in your preamble
+
+% Tight caption / float spacing and appearance
+% \captionsetup{
+%   font=footnotesize,       % caption font size
+%   labelfont=bf,            % label bold
+%   skip=2pt,                % space between caption and float (primary control)
+%   aboveskip=1pt,
+%   belowskip=1pt,
+%   singlelinecheck=false,
+%   justification=centering
+% }
+% \captionsetup[figure]{position=top}    % legend (caption) above figure
+% \captionsetup[table]{position=top}     % legend above table
+% \captionsetup[subfigure]{skip=1pt,font=footnotesize,labelfont=bf}
+
+% % Reduce vertical gaps around floats globally
+% \setlength{\textfloatsep}{6pt}   % between floats and text
+% \setlength{\floatsep}{6pt}       % between floats
+% \setlength{\intextsep}{6pt}      % between in-text floats and text
+
+% % Ensure caption glue also small
+% \setlength{\abovecaptionskip}{2pt}
+% \setlength{\belowcaptionskip}{2pt}
+% ...existing code...
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Bibliography, citations and cross referencing
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Add ABNT citation support (provides \citeonline etc.). This is inserted
+% non-invasively — it will not override existing commands already defined.
+\usepackage[alf,abnt-emphasize=bf, abnt-thesis-year=both,
+    abnt-repeated-author-omit=yes, abnt-last-names=abnt,
+    abnt-etal-cite,abnt-etal-list=3, abnt-etal-text=default,
+    abnt-and-type=e,
+    abnt-doi=doi, abnt-url-package=none,
+    abnt-verbatim-entry=no]{abntex2cite}
+
+% Provide a minimal, safe \fonte and \nota so captions / figure notes behave like your thesis.
+% We use \providecommand so we don't override definitions from other classes/packages.
+\providecommand{\fontename}{Source}        % default label used by \fonte
+\providecommand{\notaname}{Nota}          % default label used by \nota
+\providecommand{\ABNTEXfontereduzida}{\footnotesize} % small font used by \fonte
+
+\providecommand{\fonte}[2][\fontename]{%
+  \par\ABNTEXfontereduzida\noindent\textbf{#1:}\enspace #2\par
+}
+
+\providecommand{\nota}[2][\notaname]{\fonte[#1]{#2}}
+
+
+%__________________________________________________________
+%
+% G E N E R I C   C O M M A N D S
+%__________________________________________________________
+%
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% To disable miniframe dots at certain frames with 
+% \miniframesoff and \miniframeson
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\makeatletter
+\let\beamer@writeslidentry@miniframeson=\beamer@writeslidentry
+\def\beamer@writeslidentry@miniframesoff{%
+\expandafter\beamer@ifempty\expandafter{\beamer@framestartpage}{}
+{%else
+ % removed \addtocontents commands
+ \clearpage\beamer@notesactions%
+}
+										}
+\newcommand*{\miniframeson}{
+	\let\beamer@writeslidentry=\beamer@writeslidentry@miniframeson
+	}
+\newcommand*{\miniframesoff}{
+	\let\beamer@writeslidentry=\beamer@writeslidentry@miniframesoff
+	}
+
+\beamer@compresstrue
+
+\makeatother
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Command to conviently include a mp4 video
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\newcommand{\includemovie}[3]{%
+    \includemedia[%
+    width=#1,height=#2,%
+    activate=pagevisible, transparent,%
+    deactivate=pageclose,%
+    addresource=#3,%
+    flashvars={%
+        source=#3 % same path as in addresource!
+        &autoPlay=true % default: false; if =true, automatically starts playback after activation (see option ‘activation)’
+        &loop=true % if loop=true, media is played in a loop
+        %&controlBarAutoHideTimeout=0 %  time span before auto-hide
+    }%
+    ]{}{VPlayer.swf}%
+}% end of the new command
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Environment for flush left equations 
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\makeatletter
+\newenvironment{flequation}
+  {\@fleqntrue\begin{equation}}
+  {\end{equation}\@fleqnfalse}
+\newenvironment{flequation*}
+  {\@fleqntrue\begin{equation*}}
+  {\end{equation*}\@fleqnfalse}
+\makeatother
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Colors
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\green}[1]{\textcolor{OliveGreen}{#1}}
+\newcommand{\black}[1]{\textcolor{black}{#1}}
+\newcommand{\yellow}[1]{\textcolor{yellow}{#1}}
+\newcommand{\brown}[1]{\textcolor{brown}{#1}}
+\newcommand{\purple}[1]{\textcolor{DarkOrchid}{#1}}
+\newcommand{\gray}[1]{\textcolor{Gray}{#1}}
+\newcommand{\magenta}[1]{\textcolor{magenta}{#1}}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Derivatives
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\newcommand{\pd}[2]{\dfrac{\partial{#1}}{\partial{#2}}}
+\newcommand{\pdd}[2]{\dfrac{\partial^2{#1}}{\partial{#2}^2}}
+\newcommand{\dd}[2]{\dfrac{d{#1}}{d{#2}}}
+\newcommand{\at}[2][\Bigg]{#1|_{#2}}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Mathematical styles
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\newcommand{\matr}[1]{\undertilde{\bm{#1}}}
+\newcommand{\tens}[1]{\mathbbm{#1}}
+\newcommand{\sett}[1]{\mathcal{#1}\LARGE}
+\newcommand{\curss}[1]{\mathscr{#1}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Bold letters
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\def\bzero{{\bm 0}}
+\def\b1{{\bm 1}}
+\def\bd{{\bm d}}
+\def\be{{\bm e}}
+\def\bi{{\bm i}}
+\def\bj{{\bm j}}
+\def\bn{{\vec{\bm n}}}
+\def\br{{\bm r}}
+\def\bb{{\vec{\bm b}}}
+\def\bu{{\vec{\bm u}}}
+\def\bx{{\vec{\bm x}}}
+\def\bp{{\vec{\bm p}}}
+\def\bL{{\bm L}}
+\def\bR{{\bm R}}
+\def\bA{{\bm A}}
+\def\bF{{\bm F}}
+\def\bQ{{\bm Q}}
+\def\bq{{\bm q}}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Mathematical operators
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\DeclareMathOperator{\Tr}{Tr}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Citation commands
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\newcommand{\citeblue}[1]{\blue{\cite{#1}}}
+
+%__________________________________________________________
+%
+% F O R M U L A T I O N   C O M M A N D S
+%__________________________________________________________
+%
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Variable abbreviations
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\def\sig{{\sigma}}
+\def\bsig{{\undertilde{\bm \sigma}}}
+\def\eps{{\epsilon}}
+\def\beps{\bm{\undertilde{\epsilon}}}
+\def\epsp{\undertilde{{\bm \epsilon^{\prime}}}}
+\def\epsm{{\epsilon_m}}
+\def\epseq{{\epsilon_{eq}}}
+\def\lm{\lambda}
+\def\sigp{\undertilde{{\bsig^{\prime}}}}
+\def\es{{\bm e_s}}
+\def\ek{{\bm e_k}}
+\def\ep{{\bm e_p}}
+\def\eq{{\bm e_q}}
+\def\gdd{{ \green{\vec{\nabla} d}}}
+\def\dd{\red{d}}
+\def\qq{\undertilde{{\bm Q}}}
+\def\nn{{\vec{\bm n}}}
+\def\ww{{\omega(d)}}
+\def\gd{{\vec{\bm \nabla}d}}
+
+\def\zp{(\undertilde{\bm{0}}, \dd, \vec{0})}
+
+% None
+%__________________________________________________________
+%
+% D O C U M E N T   I N F O R M A T I O N S
+%__________________________________________________________
+%
+\title{
+    Phase-Field modeling of brittle fracture of orthotropic materials
+	}
+
+\author{Diego Dias Veloso \and 
+\\Ayrton Ribeiro Ferreira (Prof. Dr.) (Supervisor)}
+
+\institute{
+	Departamento de Engenharia de Estruturas \\
+	Escola de Engenharia de São Carlos \\
+	Universidade de São Paulo
+	} 
+
+\date{
+    \today
+}
+%__________________________________________________________
+%
+% B E G I N N I N G   O F   T H E   D O C U M E N T
+%__________________________________________________________
+%
+\begin{document}
+
+\justifying
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Headline logos in titleframe
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\setbeamertemplate{headline}[center]
+{\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{	}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%Do not count tilteframe in numbering
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\begin{frame}
+	\titlepage
+\end{frame}}
+\addtocounter{framenumber}{-1}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%No headlines/footlines nor numbering in the outline frame
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+{
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\begin{frame}[allowframebreaks]{Topics}
+    \tableofcontents
+\end{frame}
+
+}
+
+\addtocounter{framenumber}{-1}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Head/footlines and numbering for the other frames
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\addtobeamertemplate{navigation symbols}{}{
+    \usebeamerfont{footline}
+    \usebeamercolor[fg]{footline}
+    \hspace{1em}
+    \insertframenumber/\inserttotalframenumber
+} 
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Including other section files
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\include{chapters/1}
+\include{chapters/2}
+\include{chapters/3}
+\include{chapters/4}
+\include{chapters/5}
+\include{chapters/6}
+\include{chapters/7}
+
+
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Preparing reference frames
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\section[]{}
+\miniframesoff
+
+\begin{frame}[t, allowframebreaks]
+	\frametitle{References}
+	\bibliography{bibliography}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,21 @@
+\babel@toc {english}{}\relax 
+\beamer@sectionintoc {1}{Introduction}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Importance of Fracture Mechanics}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Anisotropic Fracture}{6}{0}{1}
+\beamer@sectionintoc {2}{Objectives}{7}{0}{2}
+\beamer@sectionintoc {3}{State of the Art}{11}{0}{3}
+\beamer@subsectionintoc {3}{1}{Griffith Theory}{12}{0}{3}
+\beamer@subsectionintoc {3}{2}{Phase-Field Method}{14}{0}{3}
+\beamer@subsectionintoc {3}{3}{Gradient Split}{17}{0}{3}
+\beamer@sectionintoc {4}{Computational Implementation}{18}{0}{4}
+\beamer@subsectionintoc {4}{1}{High-Performance Computing Tools}{19}{0}{4}
+\beamer@subsectionintoc {4}{2}{Global Minimization}{23}{0}{4}
+\beamer@subsectionintoc {4}{3}{Linear Momentum Solution}{25}{0}{4}
+\beamer@subsectionintoc {4}{4}{Damage Solution}{29}{0}{4}
+\beamer@sectionintoc {5}{Results}{32}{0}{5}
+\beamer@subsectionintoc {5}{1}{Single Edge Notch Mode I}{34}{0}{5}
+\beamer@subsectionintoc {5}{2}{Single Edge Notch Mode II}{36}{0}{5}
+\beamer@subsectionintoc {5}{3}{L-Shaped Specimen}{38}{0}{5}
+\beamer@subsectionintoc {5}{4}{Holed Plate Specimen}{40}{0}{5}
+\beamer@sectionintoc {6}{Partial Conclusions}{42}{0}{6}
+\beamer@sectionintoc {7}{Next Steps}{45}{0}{7}
