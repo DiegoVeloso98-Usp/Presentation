@@ -7,69 +7,56 @@
 
 \bibitem[Anand e Govindjee 2020]{anand_continuum_2020}
 \abntrefinfo{Anand e Govindjee}{ANAND; GOVINDJEE}{2020}
-{ANAND, L.; GOVINDJEE, S. \textbf{Continuum {Mechanics} of {Solids}}. 1. ed.
-  Oxford University PressOxford, 2020.
-ISBN 978-0-19-886472-1 978-0-19-189676-7. Dispon{\'\i}vel em:
-  \url{https://academic.oup.com/book/43650}.}
+{ANAND, L.; GOVINDJEE, S. \textbf{Continuum {Mechanics} of {Solids}}. 1. ed. Oxford University PressOxford, 2020.
+ISBN 978-0-19-886472-1 978-0-19-189676-7. Dispon{\'\i}vel em: \url{https://academic.oup.com/book/43650}.}
 
 \bibitem[Bharali et al. 2022]{bharali2022}
 \abntrefinfo{Bharali et al.}{BHARALI et al.}{2022}
-{BHARALI, R. et al. A robust monolithic solver for phase-field fracture
-  integrated with fracture energy based arc-length method and under-relaxation.
-\textbf{Computer Methods in Applied Mechanics and Engineering}, v.~394, p.
-  114927, maio 2022.
+{BHARALI, R. et al. A robust monolithic solver for phase-field fracture integrated with fracture energy based arc-length method and under-relaxation.
+\textbf{Computer Methods in Applied Mechanics and Engineering}, v.~394, p. 114927, maio 2022.
 ISSN 00457825.
-Dispon{\'\i}vel em:
-  \url{https://linkinghub.elsevier.com/retrieve/pii/S0045782522001992}.}
+Dispon{\'\i}vel em: \url{https://linkinghub.elsevier.com/retrieve/pii/S0045782522001992}.}
 
 \bibitem[Bonet, Gil e Wood 2016]{bonet_nonlinear_2016}
 \abntrefinfo{Bonet, Gil e Wood}{BONET; GIL; WOOD}{2016}
-{BONET, J.; GIL, A.~J.; WOOD, R.~D. \textbf{Nonlinear {Solid} {Mechanics} for
-  {Finite} {Element} {Analysis}: {Statics}}. 1. ed. Cambridge University Press,
-  2016.
-ISBN 978-1-107-11579-8 978-1-316-33614-4. Dispon{\'\i}vel em:
-  \url{https://www.cambridge.org/core/product/identifier/9781316336144/type/book}.}
+{BONET, J.; GIL, A.~J.; WOOD, R.~D. \textbf{Nonlinear {Solid} {Mechanics} for {Finite} {Element} {Analysis}: {Statics}}. 1. ed. Cambridge University Press, 2016.
+ISBN 978-1-107-11579-8 978-1-316-33614-4. Dispon{\'\i}vel em: \url{https://www.cambridge.org/core/product/identifier/9781316336144/type/book}.}
 
 \bibitem[Bourdin, Francfort e Marigo 2000]{Bourdin2000}
 \abntrefinfo{Bourdin, Francfort e Marigo}{BOURDIN; FRANCFORT; MARIGO}{2000}
-{BOURDIN, B.; FRANCFORT, G.; MARIGO, J.-J. Numerical experiments in revisited
-  brittle fracture.
-\textbf{Journal of the Mechanics and Physics of Solids}, v.~48, n.~4, p.
-  797--826, abr. 2000.
+{BOURDIN, B.; FRANCFORT, G.; MARIGO, J.-J. Numerical experiments in revisited brittle fracture.
+\textbf{Journal of the Mechanics and Physics of Solids}, v.~48, n.~4, p. 797--826, abr. 2000.
 ISSN 00225096.
 Dispon{\'\i}vel em: \url{doi:10.1016/S0022-5096(99)00028-9}.}
 
 \bibitem[Ferreira, Marengo e Perego 2024]{Ferreira2024}
 \abntrefinfo{Ferreira, Marengo e Perego}{FERREIRA; MARENGO; PEREGO}{2024}
-{FERREIRA, A.~R.; MARENGO, A.; PEREGO, U. A phase-field gradient-based energy
-  split for modeling of brittle fracture under cyclic loading.
+{FERREIRA, A.~R.; MARENGO, A.; PEREGO, U. A phase-field gradient-based energy split for modeling of brittle fracture under cyclic loading.
 \textbf{(under revision)}, 2024.}
+
+\bibitem[Francfort e Marigo 1998]{Francfort1998}
+\abntrefinfo{Francfort e Marigo}{FRANCFORT; MARIGO}{1998}
+{FRANCFORT, G.; MARIGO, J.-J. Revisiting brittle fracture as an energy minimization problem.
+\textbf{Journal of the Mechanics and Physics of Solids}, v.~46, n.~8, p. 1319--1342, ago. 1998.
+ISSN 00225096.
+Dispon{\'\i}vel em: \url{doi:10.1016/S0022-5096(98)00034-9}.}
 
 \bibitem[Jones e Ashby 2019]{Ashby2012}
 \abntrefinfo{Jones e Ashby}{JONES; ASHBY}{2019}
-{JONES, D. R.~H.; ASHBY, M.~F. \textbf{Engineering materials 1: an introduction
-  to properties, applications and design}. Fifth edition. Oxford, United
-  Kingdom: Butterworth-Heinemann, 2019.
+{JONES, D. R.~H.; ASHBY, M.~F. \textbf{Engineering materials 1: an introduction to properties, applications and design}. Fifth edition. Oxford, United Kingdom: Butterworth-Heinemann, 2019.
 ISBN 978-0-08-102051-7.}
 
 \bibitem[Marengo et al. 2021]{Marengo2021}
 \abntrefinfo{Marengo et al.}{MARENGO et al.}{2021}
-{MARENGO, A. et al. A rigorous and efficient explicit algorithm for
-  irreversibility enforcement in phase-field finite element modeling of brittle
-  crack propagation.
-\textbf{Computer Methods in Applied Mechanics and Engineering}, p. 114137, dez.
-  2021.
+{MARENGO, A. et al. A rigorous and efficient explicit algorithm for irreversibility enforcement in phase-field finite element modeling of brittle crack propagation.
+\textbf{Computer Methods in Applied Mechanics and Engineering}, p. 114137, dez. 2021.
 ISSN 00457825.
-Dispon{\'\i}vel em:
-  \url{https://linkinghub.elsevier.com/retrieve/pii/S0045782521004680}.}
+Dispon{\'\i}vel em: \url{https://linkinghub.elsevier.com/retrieve/pii/S0045782521004680}.}
 
 \bibitem[Miehe, Hofacker e Welschinger 2010]{Miehe2010}
 \abntrefinfo{Miehe, Hofacker e Welschinger}{MIEHE; HOFACKER; WELSCHINGER}{2010}
-{MIEHE, C.; HOFACKER, M.; WELSCHINGER, F. A phase field model for
-  rate-independent crack propagation: {{Robust}} algorithmic implementation
-  based on operator splits.
-\textbf{Computer Methods in Applied Mechanics and Engineering}, v.~199, n.
-  45-48, p. 2765--2778, nov. 2010.
+{MIEHE, C.; HOFACKER, M.; WELSCHINGER, F. A phase field model for rate-independent crack propagation: {{Robust}} algorithmic implementation based on operator splits.
+\textbf{Computer Methods in Applied Mechanics and Engineering}, v.~199, n. 45-48, p. 2765--2778, nov. 2010.
 ISSN 00457825.
 Dispon{\'\i}vel em: \url{doi:10.1016/j.cma.2010.04.011}.}
 

@@ -319,7 +319,7 @@
 	}
 
 \author{Diego Dias Veloso \and 
-\\Ayrton Ribeiro Ferreira (Prof. Dr.) (Supervisor)}
+\\Ayrton Ribeiro Ferreira (Prof. Dr.) (Advisor)}
 
 \institute{
 	Departamento de Engenharia de Estruturas \\
@@ -386,16 +386,59 @@
 \include{chapters/7}
 
 
-
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 % Preparing reference frames
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\section[]{}
+\section[]{References and Acknowledgments}
 \miniframesoff
 
 \begin{frame}[t, allowframebreaks]
 	\frametitle{References}
 	\bibliography{bibliography}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Acknowledgments}
+  \begingroup
+  % use the theme's structure color for a light "beamer blue" background
+  \setbeamercolor{background canvas}{bg=structure!10}
+  \setbeamercolor{frametitle}{fg=structure!85!black,bg=structure!10}
+  
+  \begin{center}
+    % {\color{structure!85!black}\Huge\textbf{Acknowledgments}}
+    
+    Prof. Dr. Ayrton Ribeiro Ferreira (Advisor) \\
+    \vspace{1em}
+
+    Prof. Dr. Marco Lúcio Bittencourt (External Examiner) \\
+    \vspace{1em}
+    Prof. Dr. Rodolfo André Kuche Sanches (Internal Examiner) \\
+    \vspace{1em}
+    Matt Knepley (PETSc Team) \\
+    \vspace{1em}
+    CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico \\
+    \vspace{1em}
+    FAPESP - Fundação de Amparo à Pesquisa do Estado de São Paulo \\
+    \vspace{1em}
+  \end{center}
+  
+  \vfill
+  
+  \hfill
+  \begin{minipage}{0.6\textwidth}
+    \raggedleft
+    {\color{structure!60!black}\footnotesize\textit{"Extraordinary claims require \\ extraordinary evidence."}}
+    
+    {\color{structure!85!black}\footnotesize\textit{--- Carl Sagan}}
+  \end{minipage}
+  \hspace{1cm}
+  
+  \vspace{0.8cm}
+  \endgroup
+\end{frame}
+
+\include{chapters/Current}
+
+
 
 \end{document}
