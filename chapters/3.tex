@@ -15,95 +15,60 @@
 \subsection{Griffith Theory}
 \begin{frame}
     \frametitle{Griffith Theory}
+      \vspace{-1.5em}
+    \begin{equation}
+      \varPi = U_{elastic} + {\color{red}U_{plastic}} + U_{fracture} - W_{ext} \quad \underbrace{\Longrightarrow}_{Brittle} \quad \dot{\varPi} = \dot{U}_{elastic} + \dot{U}_{fracture} - \dot{W}_{ext} 
+    \end{equation}    
   \begin{columns}[t]
     \begin{column}{0.6\textwidth}
-      \begin{equation}
-        \varPi = U_{elastic} + U_{plastic} + U_{fracture} - W_{ext} \quad ,
-      \end{equation}
-      \begin{equation}
-        \dot{\varPi} = \dot{U}_{elastic} + \dot{U}_{fracture} - \dot{W}_{ext} \quad .
-      \end{equation}
-      For a closed system, \(\dot{\varPi} = 0\), then the dissipation \(\Phi\) is given by
-      \begin{equation}
-        \Phi := G\dot{a} = \dot{W}_{ext} - \dot{U}_{elastic} = - \dfrac{d\varPi}{da} \dot{a} \quad ,
-      \end{equation}
-      \begin{equation}
-          G = - \dfrac{d\varPi}{da}
-      \end{equation}
+      For a closed system, \(\dot{\varPi} = 0\), then the \textbf{dissipation} \(\Phi\) is 
+      \begin{equation*}
+        \Phi = \dot{W}_{ext} - \dot{U}_{elastic} := G\dot{a} =  - \dfrac{d\varPi}{da} \dot{a} \quad , \quad G = - \dfrac{d\varPi}{da}
+      \end{equation*}
+      % \begin{equation}
+      %     G = - \dfrac{d\varPi}{da}
+      % \end{equation}
       and Griffith's criterion becomes 
       \begin{equation}
-          G \geq G_c \quad ,
+        G \geq G_c \quad , \text{and} \quad
+        {\color{red}
+        \begin{cases}
+          \dot{a} > 0 \rightarrow G = G_c  \\
+          \dot{a} = 0 \rightarrow G < G_c 
+        \end{cases} 
+        } 
       \end{equation}
-
+      \textbf{Critical length} of a crack, \(a_c\), is given by \(a_c = \dfrac{2E G_c}{\pi\sigma^2} .\)
     \end{column}
     \hspace{1em}
-
-    \begin{column}{0.3\textwidth}
+    \begin{column}{0.35\textwidth}
+      \vspace{-3.0em}
       \begin{figure}
         \centering
-        \caption{Body undergoing fracture process.}
-        \includegraphics[width=\linewidth]{figs/3/fracture_ex.png}
-        \fonte{\citeonline{Ashby2012}.}
+        \caption{Body undergoing fracture.}
+        \vspace{-1.0em}
+        \includegraphics[width=\textwidth]{figs/3/fracture_ex.png}
+        \citeonline{Ashby2012}.
       \end{figure}
     \end{column}
-
   \end{columns}
-    
-\end{frame}
-
-\begin{frame}
-    \frametitle{Griffith Theory}
-  \begin{columns}[t]
-    \begin{column}{0.6\textwidth}
-     
-      and Griffith's criterion becomes 
-      \begin{equation}
-          G \geq G_c \quad ,
-      \end{equation}
-      where \(G_c\) is a material Parameter
-      \begin{equation}
-      \begin{cases}
-        \dot{a} > 0 \rightarrow G = G_c  \\
-        \dot{a} = 0 \rightarrow G < G_c 
-      \end{cases}  
-      \end{equation}
-      The critical length of a crack, \(a_c\), is given by
-      \begin{equation}
-          a_c = \dfrac{2E G_c}{\pi\sigma^2} \quad ,
-      \end{equation}
-
-    \end{column}
-    \hspace{1em}
-
-    \begin{column}{0.3\textwidth}
-      \begin{figure}
-        \centering
-        \caption{Body undergoing fracture process.}
-        \includegraphics[width=\linewidth]{figs/3/fracture_ex.png}
-        \fonte{\citeonline{Ashby2012}.}
-      \end{figure}
-    \end{column}
-
-  \end{columns}
-    
+  
 \end{frame}
 
 \subsection{Phase-Field Method}
 \begin{frame}
     \frametitle{Phase-Field Method}
-
     \begin{columns}[t]
       \begin{column}{0.6\textwidth}
-        The variational recast of the fracture problem leads to
+        The variational recast done by \citeonline{Francfort1998}
         \begin{equation}
           \varPi_{int} = \underbrace{\int_{\Omega} \psi(\varepsilon)d\Omega}_{\text{Elastic}} 
           + \underbrace{\int_{\Gamma} G_c dA }_{\text{Dissipation}} \quad .
         \end{equation}
-        and its regularization by a phase-field \(d\) leads to
+        and its regularization by a phase-field \(d\) performed by \citeonline{Bourdin2000}
         \begin{equation}
-          \varPi_{int} = \int_{\Omega} \psi(\bm{\varepsilon},d)d\Omega + \int_{\Omega} \varphi(d,\nabla d) d\Omega \quad .
+          \varPi_{int} = \int_{\Omega} \psi(\bm{\varepsilon},{\color{red}\bm{d}})d\Omega + \int_{\Omega} \varphi({\color{red}\bm{d},\bm{\nabla d}}) d\Omega \quad .
         \end{equation}
-        where
         \begin{equation}
           \begin{cases}
             \psi(\bm{\varepsilon},d) = \omega(d)  \psi_0(\bm{\varepsilon}) \\
@@ -130,81 +95,67 @@
 
 \begin{frame}
     \frametitle{Phase-Field Method}
-
+    % \vspace{-2em}
     \begin{columns}[t]
-      \begin{column}{0.45\textwidth}
-        Strain energy density
-        
-        \begin{equation}
-            \psi(\bm{\varepsilon},d) = \omega(d)  \psi_0(\bm{\varepsilon})
-        \end{equation}
+      \begin{column}{0.5\textwidth}
+        The Strain and dissipation energy densities
+        \[
+          \begin{aligned}
+            {\color{red}\psi(\bm{\varepsilon},d)} &{\color{red}= \omega(d)\,\psi_0(\bm{\varepsilon})}, \quad \omega(d)=(1-d)^2\\[0.5ex]
+            \varphi(d,\nabla d) &= G_c\bigl[w(d) + c_d\lvert\nabla d\rvert^2\bigr]
+          \end{aligned}
+        \]
 
-        Quadratic degradation function  
-        
-        \begin{equation}
-            \omega(d) = (1-d)^2
-        \end{equation}
-
+        where
+        \begin{equation*}
+          w(d) =
+          \begin{cases}
+            \dfrac{3}{8l_0}d & \text{AT1} \\[0.5ex]
+            \dfrac{1}{2l_0}d^2              & \text{AT2}
+          \end{cases}
+            c_d =
+          \begin{cases}
+            \dfrac{3}{8}l_0 & \text{AT1}\\[0.5ex]
+            \dfrac{1}{2}l_0            & \text{AT2}
+          \end{cases}
+        \end{equation*}.        
     \end{column}
-    \hspace{2em}
-
-    \begin{column}{0.45\textwidth}
-      Dissipation density
-      \begin{equation}
-            \varphi(d,\nabla d) = G_c\left[w(d) + c_d\left|\nabla d\right|^2\right]  
-      \end{equation}
-      where
-      \begin{equation}
-        w(d) =
-        \begin{cases}
-          \dfrac{3}{8l_0}d & \text{AT1} \\[0.5ex]
-          \dfrac{1}{2l_0}d^2              & \text{AT2}
-        \end{cases}
-      \end{equation}
-      \begin{equation}
-          c_d =
-        \begin{cases}
-          \dfrac{3}{8}l_0 & \text{AT1}\\[0.5ex]
-          \dfrac{1}{2}l_0            & \text{AT2}
-        \end{cases}
-        .
-      \end{equation}
+    \begin{column}{0.5\textwidth}
+      \vspace{-2em}
+        \begin{figure}[H]
+        \centering
+        \caption{Interpenetration due to symmetric degradation.}
+          \begin{subfigure}[b]{0.25\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figs/3/sen2_1_nosplit.png}
+          \end{subfigure}
+          \hspace{-1.0em}
+          \begin{subfigure}[b]{0.25\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figs/3/sen2_2_nosplit.png}
+          \end{subfigure}
+          \hspace{-1.0em}
+          \begin{subfigure}[b]{0.25\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figs/3/sen2_3_nosplit.png}
+          \end{subfigure}
+          \hspace{-1.0em}
+          \begin{subfigure}[b]{0.25\textwidth}
+              \centering
+              \includegraphics[width=\textwidth]{figs/3/sen2_4_nosplit.png}
+          \end{subfigure} 
+        \\\fonte{Authors.}
+        \label{fig:interpenetration}
+      \end{figure}
+      Assymetric degradation of the strain energy
+      \begin{equation*}
+        {\color{red}
+         \psi(\bm{\varepsilon},d) = \omega(d)  \psi^+_0(\bm{\varepsilon}) + \psi^-_0(\bm{\varepsilon}) }
+      \end{equation*}
     \end{column}
   \end{columns}
-
-\end{frame}
-
-
-\begin{frame}
-    \frametitle{Assymetric Elastic Strain Energy Degradation}
-    Symmetric degradation of the strain energy density 
-  \begin{figure}[H]
-  \centering
-  \caption{SEN Mode II - Specimen with interpenetration due to symmetric elastic strain energy degradation.}
-    \begin{subfigure}[b]{0.1\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figs/3/sen2_1_nosplit.png}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.1\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figs/3/sen2_2_nosplit.png}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.1\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figs/3/sen2_3_nosplit.png}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.1\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs/3/sen2_4_nosplit.png}
-    \end{subfigure} 
-  \\\fonte{Authors.}
-  \label{fig:interpenetration}
-\end{figure}
-Assymetric degradation of the strain energy density 
-\(\rightarrow \psi(\bm{\varepsilon},d) = \omega(d)  \psi^+_0(\bm{\varepsilon}) + \psi^-_0(\bm{\varepsilon})\)
-
-\textbf{Volumetric-Deviatoric Split}
-\begin{equation}
+  \textbf{Volumetric-Deviatoric Split}
+  \begin{equation}
     \psi^{\pm}_0(\bm{\varepsilon})
     = H^{\pm}\left(\Tr(\bm{\varepsilon})\right)\,\frac{\kappa}{2}\bigl(\Tr(\bm{\varepsilon})\bigr)^2
     + \mu\,\bm{\varepsilon}_D\!:\!\bm{\varepsilon}_D
@@ -213,13 +164,12 @@ Assymetric degradation of the strain energy density
 \end{frame}
 
 
-
 \subsection{Gradient Split}
 \begin{frame}
     \frametitle{Gradient Energy Split}
     \begin{equation}
       \psi(\bm{\varepsilon},d) = 
-      \int_{\Omega} \left[\omega(d) + \left[1 - \omega(d)\right]H^-(\sigma_{0n})\right] \psi_0(\bm{\varepsilon})d\Omega\quad ,
+      \int_{\Omega} \left[\omega(d) + \left[1 - \omega(d)\right]{\color{red}H^-(\sigma_{0n})}\right] \psi_0(\bm{\varepsilon})d\Omega\quad ,
     \end{equation}
     \begin{columns}[t]
       \begin{column}{0.45\textwidth}
@@ -244,6 +194,7 @@ Assymetric degradation of the strain energy density
         \end{equation}  
       \end{column}
       \begin{column}{0.4\textwidth}
+        \vspace{-2.5em}
         \begin{figure}
             \centering
             \caption{Normal to crack direction.}

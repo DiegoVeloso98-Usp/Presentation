@@ -276,69 +276,38 @@
 \end{frame}
 
 \begin{frame}{}
-    \frametitle{L-Shaped Specimen}
-    \begin{figure}[H]
-  \centering
-  \caption{L-Shaped - Specimen with load reversal. AT1 phase‐field contours at three different time steps (or last converged step for the Vol–Dev split).}
-  
-  % Damage scale at the top
-  \begin{subfigure}[b]{0.3\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{figs/5/damageScale.png}
-  \end{subfigure}
-  
-  
-  % Table structure for organized layout
-  \begin{tabular}{ccc}
-    \multicolumn{3}{c}{\textbf{Vol-Dev}} \\
-    \hline
-    \begin{subfigure}[b]{0.30\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figs/5/Lshaped_25_voldev.png}
-      \caption{Time step 25.}
-    \end{subfigure} &
-    \begin{subfigure}[b]{0.30\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figs/5/Lshaped_36_voldev.png}
-      \caption{Time step 36.}
-    \end{subfigure} &
-    \begin{subfigure}[b]{0.30\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figs/5/Lshaped_61last_voldev.png}
-      \caption{Last converged step (61).}
-    \end{subfigure} 
-    \\
-    \multicolumn{3}{c}{\textbf{Gradient}} \\
-      \hline
-    \begin{subfigure}[b]{0.3\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figs/5/Lshaped_25_grad.png}
-      \caption{Time step 25.}
-    \end{subfigure} &
-    \begin{subfigure}[b]{0.3\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figs/5/Lshaped_36_grad.png}
-      \caption{Time step 36.}
-    \end{subfigure} &
-    \begin{subfigure}[b]{0.3\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figs/5/Lshaped_96_grad.png}
-      \caption{Time step 96.}
-    \end{subfigure} 
-  \end{tabular}
-  \fonte{Authors.}
-  \label{fig:lshapedresults}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \caption{L-Shaped - Reaction force at the prescribed displacement face.}
-    \includegraphics[width=0.7\textwidth]{figs/5/Lshaped_reactiony.pdf}
-    \fonte{Authors.}
-    \label{fig:lshapedreaction}
-\end{figure}
+  \vspace{-2em}
+    \begin{columns}[t] % Add top alignment
+        \begin{column}{0.55\textwidth} % Reduce width
+            \begin{figure}
+            \centering
+            \caption{Specimen with load reversal.}
+            
+            \begin{subfigure}[b]{0.4\textwidth} 
+                \centering
+                \includegraphics[width=\textwidth]{figs/5/damageScale.png}
+            \end{subfigure}
 
-
+            \begin{subfigure}[b]{0.55\textwidth} 
+                \centering
+                \animategraphics[loop,autoplay,width=\textwidth]{10}{figs/5/Lshaped/result.}{0000}{0095}            
+            \end{subfigure}
+            \\\fonte{Authors.}
+            \end{figure}
+        \end{column}
+        \hspace{-3em} 
+        \begin{column}{0.5\textwidth} 
+          \vspace{2em} 
+          \begin{figure}
+            \caption{Reaction forces.}
+            \centering
+            \animategraphics[loop,autoplay,width=0.9\textwidth]{10}{figs/5/Lshaped/frame_}{0002}{0097}            
+            \\\fonte{Authors.}
+          \end{figure}
+        \end{column}
+      \end{columns}
 \end{frame}
+
 
 \subsection{Holed Plate Specimen}
 \begin{frame}{}
@@ -388,57 +357,38 @@
     \end{table} 
 \end{frame}
 
+
 \begin{frame}{}
-    \frametitle{Holed Plate Specimen}
-    \begin{figure}[H]
-  \centering
-  \caption{Holed Plate - Specimen with load reversal. AT1 phase‐field contours at different time steps (or last converged step for the Vol–Dev split).}
-  % Damage scale at the top
-  \begin{subfigure}[b]{0.3\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{figs/5/damageScale.png}
-  \end{subfigure}
-  % Table structure for organized layout
-  \begin{tabular}{ccc}
-    \multicolumn{3}{c}{\textbf{Vol-Dev}} \\
-    \hline
-    &
-    \begin{subfigure}[b]{0.30\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figs/5/holed_56_voldev.png}
-      \caption{Last converged step (56).}
-    \end{subfigure} 
-    &\\
-    \multicolumn{3}{c}{\textbf{Gradient}} \\
-      \hline
-    \begin{subfigure}[b]{0.3\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figs/5/holed_301_grad.png}
-      \caption{Time step 301.}
-    \end{subfigure} &
-    \begin{subfigure}[b]{0.3\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figs/5/holed_602_grad.png}
-      \caption{Time step 602.}
-    \end{subfigure} &
-    \begin{subfigure}[b]{0.3\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figs/5/holed_903_grad.png}
-      \caption{Time step 903.}
-    \end{subfigure} \\
-  \end{tabular}
-  \\\fonte{Authors.}
-  \label{fig:holedresults}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \caption{Holed Plate Specimen - Vertical reaction of the analyzed quarter.}
-    \includegraphics[width=0.7\textwidth]{figs/5/holed_reactiony.pdf}
-    \\\fonte{Authors.}
-    \label{fig:holedreaction}
-\end{figure}
+  \vspace{-2em}
+    \begin{columns}[t] % Add top alignment
+        \begin{column}{0.55\textwidth} % Reduce width
+            \begin{figure}
+            \centering
+            \caption{Specimen with load reversal.}
+            
+            \begin{subfigure}[b]{0.4\textwidth} 
+                \centering
+                \includegraphics[width=\textwidth]{figs/5/damageScale.png}
+            \end{subfigure}
 
-
+            \begin{subfigure}[b]{0.55\textwidth} 
+                \centering
+                \animategraphics[loop,autoplay,width=\textwidth]{10}{figs/5/holed/result.}{0003}{0102}            
+            \end{subfigure}
+            \\\fonte{Authors.}
+            \end{figure}
+        \end{column}
+        \hspace{-3em} 
+        \begin{column}{0.5\textwidth} 
+          \vspace{2em} 
+          \begin{figure}
+            \caption{Reaction forces.}
+            \centering
+            \animategraphics[loop,autoplay,width=0.9\textwidth]{10}{figs/5/holed/frame_}{0002}{0101}            
+            \\\fonte{Authors.}
+          \end{figure}
+        \end{column}
+      \end{columns}
 \end{frame}
 
 

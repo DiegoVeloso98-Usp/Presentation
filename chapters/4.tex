@@ -19,7 +19,7 @@
         \item \textbf{PETSc}: A suite of data structures and routines for the scalable (parallel) solution of scientific applications modeled by partial differential equations.
         \item \textbf{METIS}: A software package for partitioning unstructured graphs and computing fill-reducing orderings of sparse matrices.
         \item \textbf{GMSH}: A 3D finite element mesh generator with built-in pre- and post-processing facilities.
-        \item \textbf{Python}: A programming language used for scripting and automation of the workflow.
+        \item \textbf{HDF5}: A data model, library, and file format for storing, managing and built for fast I/O processing and storage.
         \item \textbf{Paraview}: An open-source, multi-platform data analysis and visualization application.
     \end{itemize}
 \end{frame}
@@ -28,12 +28,16 @@
 % \subsection{PETSc}
 \begin{frame}{}
     \frametitle{PETSc}
+    PETSc (Portable, Extensible Toolkit for Scientific Computation) is designed for the \textbf{scalable} 
+    solution of scientific applications modeled by partial differential equations (\textbf{PDEs}). 
     \begin{figure}[H]
       \centering
         \includegraphics[width=.5\textwidth]{figs/4/petsc.png}
     \end{figure}
-    PETSc (Portable, Extensible Toolkit for Scientific Computation) is designed for the \textbf{scalable} solution of scientific applications modeled by partial differential equations (\textbf{PDEs}). 
-    It is a powerful and convenient interface for:
+    
+
+    \textbf{It is a powerful and convenient interface for}:
+
     \begin{itemize}[label=\textbullet]
         \item Management of \textbf{parallelism and communication}.
         \item \textbf{Algebraic operations} on distributed vectors (\texttt{Vec}) and matrices(\texttt{Mat}).
@@ -115,34 +119,42 @@
 
 % \subsection{Additional Tools}
 \begin{frame}{}
-    \frametitle{GMSH,HDF5, Python, Paraview}
+    \frametitle{C++, HDF5, Paraview, GMSH, Python}
 
     \begin{itemize}[label=\textbullet]
-        \item \textbf{GMSH}: A 3D finite element mesh generator with built-in pre- and post-processing facilities.
-        \item \textbf{HDF5}: Built for fast I/O processing and storage.
-        \item \textbf{Python}: A programming language used for scripting and automation of the workflow.
-        \item \textbf{Paraview}: Open-source multiple-platform application for interactive, scientific visualization.
+      \item \textbf{C++}: The programming language used for the implementation.
+      \item \textbf{HDF5}: Built for fast I/O processing and storage.
+      \item \textbf{Paraview}: Open-source multiple-platform application for interactive, scientific visualization.
+      \item \textbf{GMSH}: A 3D finite element mesh generator with built-in pre- and post-processing facilities.
+      \item \textbf{Python}: A programming language used for pre- and post-processing and for the GMSH API.
     \end{itemize}
 
     \begin{figure}[H]
       \centering
-      \caption{Mesh partitioning.}
-      \begin{subfigure}[b]{0.1\textwidth}
+      \begin{subfigure}[b]{0.08\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/4/cpp.png}
+      \end{subfigure}
+      \hspace{1em}
+      \begin{subfigure}[b]{0.11\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figs/4/hdf5.png}
       \end{subfigure}
       \hspace{1em}
-      \begin{subfigure}[b]{0.35\textwidth}
+      \begin{subfigure}[b]{0.37\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figs/4/paraview.png}
       \end{subfigure}
       \hspace{1em}
-      \begin{subfigure}[b]{0.1\textwidth}
+      \begin{subfigure}[b]{0.09\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figs/4/gmsh_title.png}
       \end{subfigure}
-      \\\caption*{Authors.}
-      \label{fig:process-partitioning}
+      \hspace{1em}
+      \begin{subfigure}[b]{0.07\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/4/py.png}
+      \end{subfigure}
   \end{figure}
 
 \end{frame}
@@ -342,51 +354,16 @@ with a stopping criterion defined by \citeonline{bonet_nonlinear_2016} as
 \end{frame}
 
 
-\begin{frame}{}
-    % \frametitle{System of equations}
-
-      \centering
-  \begin{adjustbox}{max width=\textwidth, max totalheight=\textheight, keepaspectratio}
-    \begin{minipage}{\textwidth}
-      \scriptsize
-  \begin{algorithmic}[1]
-    \Ensure Newton-raphson solution $\Delta\bm{u}^{k+1}$
-      \State Compute $R_0 = \bm{R}(\bm{u}^k)\cdot\Delta\bm{u}^{k+1}$
-      \State $\eta_0 \gets 1,\ \rho \gets 0.5$
-      \For{$n = 0$ {\bfseries to} $N_{\max}^{LS}$}
-        \State $\bm{u}_{\text{n}} \gets \bm{u}^k + \eta_n\,\Delta\bm{u}^{k+1}$
-        \State Assemble residual $\bm{R}(\eta_n) = \bm{F}(\eta_n)_{int} - \bm{F}_{ext}$  
-        \State Compute $R(\eta_n) = \bm{R}(\eta_n)\cdot\Delta\bm{u}^{k+1}$
-        \If{$|R(\eta_n)| \le \rho\,|R_0|$}
-          \State \textbf{break}
-        \Else
-          \State $\alpha \gets R_0 / R(\eta_n)$
-          \If{$\alpha < 0$}
-            \State $\eta_n \gets \alpha/2 + \sqrt{(\alpha/2)^2 - \alpha}$
-          \Else
-            \State $\eta_n \gets \alpha/2$
-          \EndIf
-        \EndIf
-        \State $n \gets n + 1$
-      \EndFor
-      \State $\bm{u}^{\,k+1} \gets \bm{u}^k + \eta_n\,\Delta\bm{u}^{k+1}$
-  \end{algorithmic}
-    \end{minipage}
-  \end{adjustbox}
-
-    
-\end{frame}
-
-
 
 \subsection{Damage Solution}
 \begin{frame}{}
     \frametitle{Symmetric Linear Complementarity Problem (SLCP)}
-    Taylor expansion around \(\hat{\bm{d}}_n\)
+    \vspace{-2em}
+    \citeonline{Marengo2021} performs a Taylor expansion around \(\hat{\bm{d}}_n\)
     \begin{equation}
     \varPi_{n+1}(\hat{\bm{u}}^i,\hat{\bm{d}})
-    = \frac12\,\Delta\hat{\bm{d}}^{\mathsf T}\,Q^i\,\Delta\hat{\bm{d}}
-    + \Delta\hat{\bm{d}}^{\mathsf T}\,q^i
+    = \underbrace{\frac12\,\Delta\hat{\bm{d}}^{\mathsf T}\,Q^i\,\Delta\hat{\bm{d}}
+    + \Delta\hat{\bm{d}}^{\mathsf T}\,q^i}_{\text{Term to be minimized}}
     + \varPi_{n+1}(\hat{\bm{u}}^i,\hat{\bm{d}}_n),
 \end{equation}
 where
@@ -411,8 +388,7 @@ and finally, the Jacobian (Hessian) \(Q^i\) and Gradient(Residue) \(q^i\) are gi
 
 \begin{frame}{}
     \frametitle{Symmetric Linear Complementarity Problem (SLCP)}
-
-    the constant element dissipation matrix \(\Phi_e\) is given by
+    Where, the constant element dissipation matrix \(\Phi_e\) is given by
 \begin{equation}
   \Phi_e := 
   \begin{cases}
@@ -462,7 +438,7 @@ The SLCP is gives rise to the following conditions:
     , \quad
     \Delta d_{n+1} \geq 0
     \end{equation}
-
+    which can be solved by a Projected Successive Over-Relaxation (PSOR) iterative scheme
     \begin{equation}
     x^{k+1} = \left(\mathbf{L} + \mathbf{D}\right)^{-1}\left(b - \mathbf{U}x^k\right)
 \end{equation}
